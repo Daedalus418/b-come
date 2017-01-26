@@ -3,9 +3,12 @@ const routes = ($routeProvider, $httpProvider, $locationProvider) => {
     $routeProvider
         .when('/', {
             templateUrl: 'views/main.html',
-            resolve: {
-                connected: checkIsConnected
-            }
+            // resolve: {
+            //     connected: checkIsConnected
+            // }
+        })
+        .when('/home', {
+            templateUrl: 'views/home.html'
         })
         .when('/mention', {
             templateUrl: 'views/mention.html'
@@ -17,25 +20,25 @@ const routes = ($routeProvider, $httpProvider, $locationProvider) => {
             templateUrl: 'views/editUser.html',
             controller: 'editUserController',
             controllerAs: 'vm',
-            resolve: {
-                connected: checkIsConnected
-            }
+            // resolve: {
+            //     connected: checkIsConnected
+            // }
         })
         .when('/utilisateur', {
             templateUrl: 'views/createUser.html',
             controller: 'createUserController',
             controllerAs: 'vm',
-            resolve: {
-                connected: checkIsConnected
-            }
+            // resolve: {
+            //     connected: checkIsConnected
+            // }
         })
         .when('/liste', {
             templateUrl: 'views/liste.html',
             controller: 'listController',
             controllerAs: 'vm',
-            resolve: {
-                connected: checkIsConnected
-            }
+            // resolve: {
+            //     connected: checkIsConnected
+            // }
         })
         .when('/login', {
             templateUrl: 'views/login.html',

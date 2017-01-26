@@ -8,7 +8,7 @@
 /* NavBar*/
 
 .iconNav {
-    padding-right: 15%;
+    padding-right: 35%;
 }
 
 .NavBar {
@@ -18,173 +18,71 @@
 .navbar_logo {
     height: 100%;
     max-height: 55px;
-    padding-left: 2%;
+    padding-left: 5%;
     width: auto;
 }
 
 .buttonAdmin {
+    font-size: 20px;
     font-weight: bold;
-
-}
-
-footer {
-    background-color: #353D9E!important;
-    padding-bottom: 1%;
 }
 
 
-/*html {
-    color: white
+/*Login*/
+
+.connect {
+    margin-right: 35%;
+    margin-left: 35%;
+    margin-top: 10%;
 }
 
-body {
-    background-color: rgb(45, 78, 130);
-    font-style: Roboto;
+.btnconnect {
+    width: 27%;
 }
 
-
-/*.BlueBackground {
-    background-color: rgb(45, 78, 130);
+.form-control {
+    padding-left: 10px!important;
 }
 
-.whiteFont {
-    color: rgb(255, 255, 255);
+.marge {
+    margin-bottom: -6%;
 }
 
 .blueFont {
-    color: rgb(45, 78, 130);
+    color: #353E9D;
 }
 
-.whiteBackground {
-    background-color: rgb(255, 255, 255);
-}*/
 
+/*Home*/
 
-/*input {
-    color: white!important;
-    border-bottom: 1px solid white!important;
+.currentSeason {
+    font-size: 18px;
+    margin: 1% 0 0 0;
+    padding: 0;
 }
 
-.input-field label {
-    color: white!important;
-}*/
-
-
-/* NAVBAR*/
-
-
-/*.right, .right li, .right li a, .right li a i {
-    height: 6vh;
-    line-height: 6vh;
+#currentSeason1 {
+    color: #353D9E;
+    font-weight: bold;
+    font-size: 18px;
 }
 
-.right a {
-    font-size: 1rem;
+#currentSeason2 {
+    color: #F03ED5;
+    font-weight: bold;
+    font-size: 17px;
 }
 
-.navbar_link {
-    color: white;
+.oldSeasonsLink {
+    color: grey;
+    font-weight: bold;
+    margin: 1% 0 0 0;
 }
 
-nav ul a {
-    color: white;
+
+/*Footer*/
+
+footer {
+    background-color: #353D9E!important;
+    padding-bottom: 1.4%;
 }
-
-nav {
-    background- color: #353D9E;
-    height: 6vh;
-}
-
-nav img {
-    width: 100%;
-}
-
-.navbar_logo {
-    height: 100%;
-    max-height: 65px;
-    width: auto;
-}
-
-.navbar_paragraphe {
-    color: white;
-    margin-right: 8%;
-    margin-left: 8%;
-    margin-bottom: 5%;
-}
-
-.main_next_logo {
-    font-size: 5em;
-}
-
-.blue-text {
-    color: #2a477c !important;
-}*/
-
-
-/*USER*/
-
-
-/*.center {
-  margin-top: 5% !important;
-}*/
-
-
-/*.utilisateur {
-    margin-top: 8%;
-}
-
-label {
-    color: white;
-    opacity: 0.75;
-}
-
-.blueForm {
-    background-color: #2a477c!important;
-    border: 1px solid #2a477c;
-}
-
-.checkbox-indigo[type="checkbox"]+label:before {
-    border: 2px solid white;
-    background: transparent;
-}
-
-.checkbox-indigo[type="checkbox"]:checked+label:before {
-    border: 2px solid transparent;
-    border-bottom: 2px solid white;
-    border-right: 2px solid white;
-    background: transparent;
-}
-
-.checkbox-indigo.filled-in[type="checkbox"]+label:after {
-    border: 2px solid white;
-    background: transparent;
-}
-
-.checkbox-indigo.filled-in[type="checkbox"]:checked+label:after {
-    background: white;
-}
-
-.checkbox-indigo.filled-in[type="checkbox"]:checked+label:before {
-    border-top: 2px solid transparent;
-    border-left: 2px solid transparent;
-    border-right: 2px solid #fff;
-    border-bottom: 2px solid #fff;
-}*/
-
-
-/*LISTE*/
-
-
-/*.collection-item.avatar {
-    font-size: 1em
-}
-
-.textuel {
-    margin-top: 2%;
-    color: #2a477c;
-}
-
-.material-icons.prefix.textuel {
-    font-size: 3em;
-    margin-top: 7%;
-}*/
