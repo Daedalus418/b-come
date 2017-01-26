@@ -30,6 +30,9 @@ const userSchema = new mongoose.Schema({
         type: String,
         required: [true, 'Définissez un mot de passe']
     },
+    poste: {
+        type: String,
+    },
     isAdmin: {
         type: Boolean,
         default: false
