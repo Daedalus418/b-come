@@ -1,0 +1,11 @@
+angular.module('app', ['ngRoute'])
+        .factory('sessionFactory', sessionFactory)
+        .service('userService', userService)
+        .controller('navbarController', navbarController)
+        .controller('loginController', loginController)
+        .controller('listController', listController)
+        .controller('editUserController', updateUserController)
+        .controller('createUserController', createUserController)
+        .config(routes)
+        .run(loginStatus)
+        ;
