@@ -5,7 +5,7 @@ import token from '../../token.js';
 
 const hashCode = (s) => s.split("").reduce((a, b) => {
     a = ((a << 5) - a) + b.charCodeAt(0);
-    a & a
+    a & a;
 }, 0);
 
 const userSchema = new mongoose.Schema({

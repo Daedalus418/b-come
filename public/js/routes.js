@@ -42,6 +42,11 @@ const routes = ($routeProvider, $httpProvider, $locationProvider) => {
             controller: 'loginController',
             controllerAs: 'vm'
         })
+        .when('/steph', {
+            templateUrl: 'views/teststeph.html',
+            controller: 'saisonController',
+            controllerAs: 'vm'
+        })
         .otherwise({
             redirectTo: '/'
         });
