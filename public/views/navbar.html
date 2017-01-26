@@ -7,8 +7,8 @@
                     <i class="material-icons left ">perm_identity</i>
                 </a>
             </li>
-            <li class="iconNav">
-                <i class="material-icons left">star</i>20
+            <li class="iconNav" ng-model='vm.user.credit'>
+                <i class="material-icons left">star</i>{{vm.user.credit}}
             </li>
             <li ng-show='vm.isLogged'>
                 <a href='#/login' ng-click='vm.logout()' class="navbar_link">
