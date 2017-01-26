@@ -10,12 +10,6 @@ const routes = ($routeProvider, $httpProvider, $locationProvider) => {
         .when('/home', {
             templateUrl: 'views/home.html'
         })
-        .when('/mention', {
-            templateUrl: 'views/mention.html'
-        })
-        .when('/credit', {
-            templateUrl: 'views/credit.html'
-        })
         .when('/utilisateur/:id', {
             templateUrl: 'views/editUser.html',
             controller: 'editUserController',
@@ -27,14 +21,6 @@ const routes = ($routeProvider, $httpProvider, $locationProvider) => {
         .when('/utilisateur', {
             templateUrl: 'views/createUser.html',
             controller: 'createUserController',
-            controllerAs: 'vm',
-            // resolve: {
-            //     connected: checkIsConnected
-            // }
-        })
-        .when('/liste', {
-            templateUrl: 'views/liste.html',
-            controller: 'listController',
             controllerAs: 'vm',
             // resolve: {
             //     connected: checkIsConnected

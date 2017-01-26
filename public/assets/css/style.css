@@ -1,7 +1,11 @@
 /* Global*/
 
 * {
-    font-family: 'fira sans';
+    font-family: 'Fira Sans', sans-serif;
+}
+
+.divider {
+    background-color: #9C9C9C;
 }
 
 
@@ -55,28 +59,126 @@
 
 /*Home*/
 
+.homePage {
+    background-color: #DEDEDE;
+}
+
 .currentSeason {
-    font-size: 18px;
-    margin: 1% 0 0 0;
+    font-size: 20px;
+    margin: 1% 0 0 4%!important;
     padding: 0;
 }
 
 #currentSeason1 {
     color: #353D9E;
-    font-weight: bold;
-    font-size: 18px;
+    font-weight: 400;
+    font-size: 14px;
 }
 
 #currentSeason2 {
     color: #F03ED5;
-    font-weight: bold;
-    font-size: 17px;
+    font-weight: 400;
+    font-size: 14px;
 }
 
 .oldSeasonsLink {
     color: grey;
-    font-weight: bold;
-    margin: 1% 0 0 0;
+    font-weight: 400;
+    font-size: 14px;
+    margin: 1.5% 0 0 0!important;
+}
+
+.blocBanner {
+    margin: 0;
+}
+
+#imgHome {
+    margin: 5% 0 0 0;
+    height: auto;
+    width: auto;
+}
+
+.textHome {
+    padding: 4% 0 0% 15%!important;
+}
+
+#accroche {
+    color: #353D9E;
+    font-size: 42px;
+    font-style: italic;
+    font-weight: 300;
+    text-align: justify;
+}
+
+#auteurAccroche {
+    color: red;
+    font-size: 28px;
+    font-weight: 300;
+    text-align: left;
+}
+
+.blocTri {
+    color: grey;
+    margin: 1% 0 1% 0;
+}
+
+.itemTri {
+    border: 1px grey solid;
+    margin: 0;
+    padding: 0;
+}
+
+.titreFormation {
+    color: #353D9E;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.descriptionFormation {
+    color: #353D9E;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: justify;
+}
+
+.texteFormation {
+    margin: 3% 3% 3% 3%!important;
+    padding: 3% 3% 3% 3%!important;
+}
+
+.texteFormation1 {
+    margin: 3% 3% 3% 3%!important;
+    padding: 3% 3% 3% 3%!important;
+}
+
+.starFormation {
+    color: red;
+}
+
+.avisFormation {
+    color: red;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.placeFormation {
+    color: red;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.creditsFormation {
+    color: #353D9E;
+    font-size: 14px;
+    font-weight: 400;
+    text-decoration: underline;
+}
+
+.typeFormation {
+    color: #353D9E;
+    font-size: 14px;
+    font-weight: 400;
+    text-decoration: underline;
 }
 
 
