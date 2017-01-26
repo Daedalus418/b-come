@@ -1,7 +1,18 @@
 html {
     background-color: #FCFCFC;
     color: #353E9D;
+
 }
+
+  body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+  main {
+    flex: 1 0 auto;
+  }
 
 * {
     font-family: 'fira sans';
@@ -76,4 +87,18 @@ footer {
 /* Profil*/
 .profilMarge {
     margin-top: 1%;
+}
+
+/* admin*/
+
+.btnAdmin{
+  width: 100px!important;
+  height: 100px!important;
+}
+
+.btn-floating.btn-large.btnAdmin i {
+    line-height: 96px!important;
+}
+.btn-large.btnAdmin i {
+    font-size: 3.6rem!important;
 }

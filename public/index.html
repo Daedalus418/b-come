@@ -6,9 +6,9 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link rel="shortcut icon" href="assets/img/bulle_bleu_png.png">
+        <link rel="shortcut icon" href="assets/img/icon.png">
 
-        <title>Le Vrai du Faux</title>
+        <title>B-come</title>
         <link rel="stylesheet" href="vendor/materialize/bin/materialize.css" title="materialize"/>
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
         <link rel="stylesheet" href="assets/css/style.css">
@@ -16,11 +16,13 @@
     </head>
     <body>
 
-        <div ng-include="'views/navbar.html'"></div>
+      <ng-include src="'views/navbar.html'"></ng-include>
 
-        <ng-view></ng-view>
+        <main>
+          <ng-view></ng-view>
+        </main>
 
-        <div><ng-include src="'views/footer.html'"></ng-include></div>
+        <ng-include src="'views/footer.html'"></ng-include>
 
         <script src="vendor/jquery/dist/jquery.min.js"></script>
         <script src="vendor/materialize/dist/js/materialize.js"></script>
