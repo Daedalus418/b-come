@@ -18,11 +18,9 @@
 				<input type="password" class="validate" id="password" ng-model='vm.user.password'>
 				<label for="password">{{vm.user.password || "Mot de passe"}}</label>
 			</div>
-			<div class="row blue-text">
-	        <select ng-model="vm.user.poste" class="browser-default col s6">
-	      			<option value="" disabled selected>Poste occupé</option>
-	      			<option ng-repeat="poste in vm.postes">{{poste}}</option>
-	    		</select>
+			<div class="row blue-text col s12">
+				<input type="text" id="poste" ng-model='vm.user.poste'>
+				<label for="poste">{{vm.user.poste}}</label>
 	    </div>
 			<div class="input-field col s12 ">
 				<input type="checkbox" class="checkbox-indigo" id="isadmin" ng-model='vm.user.isAdmin' />
