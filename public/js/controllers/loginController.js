@@ -7,7 +7,7 @@ function loginController(userService, sessionFactory, $location, $rootScope) {
 
     this.login = () => {
         this.userService.connect({
-            name: this.name,
+            last_name: this.last_name,
             password: this.password
         }).then((res) => {
             this.sessionFactory.token = res.data.token;

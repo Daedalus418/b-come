@@ -5,6 +5,7 @@ function createUserController(userService, sessionFactory, $timeout, $location, 
     this.$timeout = $timeout;
     this.$location = $location;
     this.$rootScope = $rootScope;
+    this.postes = ["Ingénieur", "Employé", "Ouvrier"];
 
     this.createAccount = () => {
         this.userService.create({
@@ -12,6 +13,7 @@ function createUserController(userService, sessionFactory, $timeout, $location, 
             first_name: this.first_name,
             email: this.email,
             password: this.password,
+            poste: this.poste,
             isAdmin: this.isadmin
         }).then((res) => {
             this.loginMessage = {};
