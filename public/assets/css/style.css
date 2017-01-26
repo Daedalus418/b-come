@@ -1,46 +1,36 @@
+/* Global*/
+
 * {
-  font-family:'fira sans';
+    font-family: 'fira sans';
 }
+
 
 /* NavBar*/
 
 .iconNav {
-  padding-right : 2%;
+    padding-right: 15%;
 }
 
 .NavBar {
-  background-color: #353D9E;
+    background-color: #353D9E;
 }
 
 .navbar_logo {
-  height: 100%;
-  max-height: 55px;
-  padding-left: 2%;
-  width: auto;
+    height: 100%;
+    max-height: 55px;
+    padding-left: 2%;
+    width: auto;
 }
 
+.buttonAdmin {
+    font-weight: bold;
 
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+footer {
+    background-color: #353D9E!important;
+    padding-bottom: 1%;
+}
 
 
 /*html {
@@ -69,6 +59,7 @@ body {
     background-color: rgb(255, 255, 255);
 }*/
 
+
 /*input {
     color: white!important;
     border-bottom: 1px solid white!important;
@@ -80,6 +71,7 @@ body {
 
 
 /* NAVBAR*/
+
 
 /*.right, .right li, .right li a, .right li a i {
     height: 6vh;
@@ -129,27 +121,13 @@ nav img {
 }*/
 
 
-/*FOOTER*/
-
-/*.social_footer {
-    padding-top: 10px;
-    width: 4vh;
-}
-
-.main_footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 6vh;
-}*/
-
-
 /*USER*/
 
 
 /*.center {
   margin-top: 5% !important;
 }*/
+
 
 /*.utilisateur {
     margin-top: 8%;
@@ -196,6 +174,7 @@ label {
 
 /*LISTE*/
 
+
 /*.collection-item.avatar {
     font-size: 1em
 }
@@ -208,32 +187,4 @@ label {
 .material-icons.prefix.textuel {
     font-size: 3em;
     margin-top: 7%;
-}*/
-
-
-/*RESPONSIVE*/
-
-/*@media screen and (min-height: 993px) {
-
-    .main-text {
-        margin-top: 15%;
-    }
-    .main_center {
-        margin-top: 10%;
-    }
-    .navbar_paragraphe {
-        font-size: 2rem;
-    }
-}
-
-
-    .main-text {
-        margin-top: 7%;
-    }
-    .main_center {
-        margin-top: 10%;
-    }
-    .navbar_paragraphe {
-        font-size: 1.3rem;
-    }
 }*/
