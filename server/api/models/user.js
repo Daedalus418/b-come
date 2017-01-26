@@ -30,14 +30,6 @@ const userSchema = new mongoose.Schema({
         type: String,
         required: [true, 'Définissez un mot de passe']
     },
-    bij: {
-      type: String,
-      required: [true, 'Entrez un nom de structure (BIJ, UNIJ,...)']
-    },
-    number: {
-      type: Number,
-      required: [true, 'Entrez un numéro de département']
-    },
     isAdmin: {
         type: Boolean,
         default: false
