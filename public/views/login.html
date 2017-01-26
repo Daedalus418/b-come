@@ -4,8 +4,8 @@
     </div>
     <form class="col s12">
         <div class="input-field col s12">
-            <input type="email" class="form-control" id="email" ng-model='vm.email' ng-required='true'>
-            <label for="email" class="col-sm-2 control-label">Email</label>
+            <input type="textarea" class="form-control" id="name" ng-model='vm.name' ng-required='true'>
+            <label for="name" class="col-sm-2 control-label">Nom</label>
         </div>
         <div class="input-field col s12">
             <input type="password" class="form-control" id="password" ng-model='vm.password' ng-required='true'>
@@ -15,7 +15,7 @@
             <p>Mot de passe oublié ? Contactez votre administrateur.</p>
         </div>
         <div class="input-field col s10">
-            <button ng-click='vm.login()' ng-disabled="formConnect.$invalid" class="btn btn-primary pull-right">Sign in</button>
+            <button ng-click='vm.login()' ng-disabled="formConnect.$invalid" class="btn btn-primary pull-right">Connexion</button>
         </div>
     </form>
     <div ng-show="(vm.loginMessage)" class="alert" ng-class="{'alert-danger': vm.loginMessage.type == 'error', 'alert-success': vm.loginMessage.type == 'success', 'alert-info': vm.loginMessage.type == 'info'}">
