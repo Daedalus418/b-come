@@ -30,6 +30,13 @@ const userSchema = new mongoose.Schema({
         type: String,
         required: [true, 'Définissez un mot de passe']
     },
+    poste: {
+        type: String
+    },
+    credit: {
+        type: Number,
+        required: [true, 'Entrez un nombre de crédits']
+    },
     isAdmin: {
         type: Boolean,
         default: false

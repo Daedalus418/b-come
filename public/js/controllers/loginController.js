@@ -20,7 +20,6 @@ function loginController(userService, sessionFactory, $location, $rootScope) {
             this.sessionFactory.isLogged = false;
             this.$rootScope.$emit('loginStatusChanged', false);
             this.loginMessage = {};
-            this.loginMessage.type = "Erreur";
             this.loginMessage.message = "Erreur de login ou de mot de passe";
         });
     };
