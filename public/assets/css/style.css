@@ -1,36 +1,39 @@
 html {
-    color: white
+    color: #353E9D;
 }
 
 body {
-    background-color: rgb(45, 78, 130);
+    background-color: #353E9D;
     font-style: Roboto;
-
 }
-.BlueBackground {
-    background-color: rgb(45, 78, 130);
-}
+/* login*/
 
-.whiteFont {
-    color: rgb(255, 255, 255);
-}
 
-.blueFont {
-    color: rgb(45, 78, 130);
+
+
+.connect {
+    margin-right: 35%;
+    margin-left: 35%;
+    margin-top: 10%;
 }
 
-.whiteBackground {
-    background-color: rgb(255, 255, 255);
+.btnconnect{
+width: 27%;
 }
 
-input {
-    color: white!important;
-    border-bottom: 1px solid white!important;
+
+.marge{
+  margin-bottom: -8%;
 }
 
-.input-field label {
-    color: white!important;
-}
+
+
+
+
+
+
+
+
 
 
 /* NAVBAR*/
@@ -84,11 +87,6 @@ nav img {
 
 /*FOOTER*/
 
-.social_footer {
-    padding-top: 10px;
-    width: 4vh;
-}
-
 .main_footer {
     position: absolute;
     bottom: 0;
@@ -97,10 +95,6 @@ nav img {
 }
 
 /*USER*/
-
-/*.center {
-  margin-top: 5% !important;
-}*/
 
 .utilisateur {
     margin-top: 8%;
