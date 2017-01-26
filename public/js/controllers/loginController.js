@@ -7,7 +7,7 @@ function loginController(userService, sessionFactory, $location, $rootScope) {
 
     this.login = () => {
         this.userService.connect({
-            email: this.email,
+            name: this.name,
             password: this.password
         }).then((res) => {
             this.sessionFactory.token = res.data.token;
@@ -20,9 +20,9 @@ function loginController(userService, sessionFactory, $location, $rootScope) {
             this.sessionFactory.isLogged = false;
             this.$rootScope.$emit('loginStatusChanged', false);
             this.loginMessage = {};
-            this.loginMessage.type = "error";
-            this.loginMessage.title = "Sign in error";
-            this.loginMessage.message = "Error login or password";
+            this.loginMessage.type = "Erreur";
+            this.loginMessage.title = "Erreur de connexion";
+            this.loginMessage.message = "Erreur de login ou de mot de passe";
         });
     };
 }
