@@ -1,4 +1,4 @@
-<nav role="navigation" ng-controller='navbarController as vm'  class="NavBar">
+<nav role="navigation" ng-controller='navbarController as vm' class="NavBar">
     <div class="nav-wrapper">
       <a href="#/"><img class="navbar_logo" src="assets/img/logo.svg"></a>
         <ul class="right">
@@ -8,12 +8,12 @@
               </a>
             </li>
             <li>
-                <a href="#/" class="navbar_link">
+                <a href="#/login" class="navbar_link" ng-show="vm.isLogged">
                     <i class="material-icons left">home</i>Accueil</a>
             </li>
             <li>
                 <a href="#/profil/{{vm.user._id}}" class="navbar_link" ng-show="vm.isLogged">
-                    <i class="material-icons left">&#xE8A6;</i>Profil</a>
+                    <i class="material-icons left">account_circle</i>Profil</a>
             </li>
             <li>
                 <a href="#/liste" class="navbar_link" ng-model='vm.user.credit' ng-show="vm.isLogged">
