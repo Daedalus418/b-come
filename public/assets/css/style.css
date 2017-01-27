@@ -229,8 +229,8 @@ main {
 }
 
 #titreQuizz {
-  font-size: 35px;
-  font-weight: 600;
+    font-size: 35px;
+    font-weight: 600;
 }
 
 #quizzWord {
@@ -255,9 +255,10 @@ main {
 }
 
 .questionQuizz {
-  font-size: 24px;
-  font-weight: 400;
+    font-size: 24px;
+    font-weight: 400;
 }
+
 
 /* Profil*/
 
@@ -279,6 +280,10 @@ main {
 
 .btn-large.btnAdmin i {
     font-size: 3.6rem!important;
+}
+
+.postAdmin {
+    margin-top: 17px;
 }
 
 

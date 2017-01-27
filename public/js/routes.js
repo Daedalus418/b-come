@@ -23,7 +23,7 @@ const routes = ($routeProvider, $httpProvider, $locationProvider) => {
         })
 
         .when('/admin', {
-            templateUrl: 'views/admin.html'
+            templateUrl: 'views/admin.html',
         })
 
         .when('/utilisateur/:id', {
