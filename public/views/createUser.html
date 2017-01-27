@@ -1,6 +1,6 @@
 <div class="container">
 <h1 class="center">Ajouter un utilisateur</h1>
-<div class="row white-text utilisateur">
+<div class="row blue-text utilisateur">
     <div class="row">
         <div class="input-field col s6">
             <input type="text" class="validate" id="last_name" ng-model='vm.last_name' ng-required='true'>
@@ -39,8 +39,8 @@
     </div>
     <div class="row">
         <div class="center">
-            <a href="#/liste" class="waves-effect waves-light btn white red-text"><i class="material-icons left">&#xE5CD;</i>Supprimer</a>
-            <a class="waves-effect waves-light btn white green-text" ng-click='vm.createAccount()'><i class="material-icons left">&#xE5CA;</i>Valider</a>
+            <a href="#/liste" class="waves-effect waves-light btn white red-text">Annuler</a>
+            <a href="#/liste" class="waves-effect waves-light btn white green-text" ng-click='vm.createAccount()'>Enregistrer</a>
             <br/> {{vm.loginMessage.title}}
         </div>
     </div>
