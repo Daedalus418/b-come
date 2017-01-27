@@ -1,5 +1,25 @@
-<div class="container">
+<div class="container center">
     <div class="row">
+        <h1 id="titreAdminFormation">Formations</h1>
+        <div class="row">
+            <div class="col s6 m6 l6">
+                <a href="" class="btn-floating btn-large indigo darken-1 btnAdmin">
+                    <i class="material-icons">wb_sunny</i>
+                </a>
+                <p>
+                    Gestion des saisons
+                </p>
+            </div>
+            <div class="col 6 m6 l6">
+                <a href="" target="_blank" class="btn-floating btn-large indigo darken-1 btnAdmin">
+                    <i class="material-icons">school</i>
+                </a>
+                <p>
+                    Gestion des formations
+                </p>
+            </div>
+
+        </div>
         <form class="col s12">
             <div class="row">
                 <div class="input-field col s12 m12 l12">
@@ -13,13 +33,19 @@
             </div>
             <div class="row">
                 <div class="input-field col s12 m12 l12">
-                    <textarea placeholder="Importer un contenu visuel" id="textarea1" class="materialize-textarea"></textarea>
+                    <textarea placeholder="Texte" id="textarea1" class="materialize-textarea"></textarea>
                 </div>
             </div>
         </div>
     </form>
     <div href='' class="input-field center">
-        <button class="btn waves-effect waves-light buttonQuizz" type="submit" name="action">Envoyer
+        <button class="btn waves-effect waves-light buttonQuizz" type="submit" name="action">Enregistrer
         </button>
+    </div>
+    <div id="backAdminCours">
+        <a href="/#/admin">
+            <i class="tiny material-icons">input</i>
+            Retour accueil administration
+        </a>
     </div>
 </div>
