@@ -24,13 +24,18 @@
         </ul>
     </div>
 
-<!-- <div>
-    <ul class="collection">
-        <li ng-repeat="user in vm.users | filter:vm.searchText" class="collection-item avatar">
-            <div class="col s4 textuel">{{user.first_name}}</div>
-            <div class="col s4 textuel">{{user.last_name}}</div>
-            <div class="col s4 textuel">{{user.bij}}</div>
-
-        </li>
-    </ul>
-</div> -->
+    <div ng-hide="vm.hideMe == 'ligne'" class="row">
+        <ul class="collection">
+            <li class="white darken-4 collection-item avatar">
+                <div class="col s12">
+                    <div class="col s4 profilMarge black-text">Saison 1</p></div>
+                    <div class="col s4 profilMarge black-text">Gestion du temp</p></div>
+                    <div class="col s1">
+                        <a ng-click="vm.deleteLigne()" class="btn-floating btn-large waves-effect waves-light red accent-4 right">
+                            <i class="material-icons">&#xE872;</i>
+                        </a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
