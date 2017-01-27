@@ -1,25 +1,28 @@
-<div class="center">
-    <img class="circle" src="assets/img/guy.png">
-    <h1 class="center">Profil</h1>
-    <p ng-model='vm.user.first_name' class="center">{{vm.user.first_name}}</p>
-    <p ng-model='vm.user.last_name' class="center">{{vm.user.last_name}}</p>
-</div>
 
-<div class="row">
+<div class='profileBg'>
+    <div class="center">
+        <img class="circle" src="assets/img/guy.png">
+        <p class="center profileSize">{{vm.user.first_name}} {{vm.user.last_name}}</p>
+        <div class="row">
+        <div class='pink-text lighten-2 col s2 offset-s4'>{{vm.user.credit}}<i class="material-icons">star</i>restants</div>
+        <div class='col s2'>{{vm.user.credit}}<i class="material-icons">star</i>utilisés</div>
+      </div>
+    </div>
 
-    <ul class="collection blueForm">
-        <li class="collection-item avatar blueForm">
-            <div class="col s12">
-                <div class="col s4 profilMarge">Saison</div>
-                <div class="col s4 profilMarge">Theme</div>
-                <div class="input-field col s4">
-                    <i class="material-icons prefix">&#xE8B6;</i>
-                    <input ng-model="vm.searchText" type="text" class="form-control" placeholder="Recherche">
+    <div class="row">
+        <ul class="collection">
+            <li class="grey darken-4 collection-item avatar">
+                <div class="col s12">
+                    <div class="col s4 profilMarge profileColor">Saison</p></div>
+                    <div class="col s4 profilMarge profileColor">Thème</p></div>
+                    <div class="input-field col s4 profileColor">
+                        <i class="material-icons prefix">&#xE8B6;</i>
+                        <input ng-model="vm.searchText" type="text" class="form-control" placeholder="Recherche">
+                    </div>
                 </div>
-            </div>
-        </li>
-    </ul>
-</div>
+            </li>
+        </ul>
+    </div>
 
 <!-- <div>
     <ul class="collection">
