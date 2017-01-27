@@ -7,15 +7,15 @@ module.exports = (app) => {
 
     var saison = new Saison();
 
-    router.get('/formation', saison.findAll);
+    router.get('/saison', saison.findAll);
 
-    router.get('/formation:id', saison.findById);
+    router.get('/saison:id', saison.findById);
 
-    router.post('/formation', saison.create);
+    router.post('/saison', saison.create);
 
-    router.put('/formation:id', saison.update);
+    router.put('/saison:id', saison.update);
 
-    router.delete('/formation:id', saison.delete);
+    router.delete('/saison:id', saison.delete);
 
     app.use('/saisons', router);
 
