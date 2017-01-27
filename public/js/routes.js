@@ -43,7 +43,7 @@ const routes = ($routeProvider, $httpProvider, $locationProvider) => {
             controllerAs: 'vm'
         })
         .when('/steph', {
-            templateUrl: 'views/teststeph.html',
+            templateUrl: 'views/addformation.html',
             controller: 'saisonController',
             controllerAs: 'vm'
         })
