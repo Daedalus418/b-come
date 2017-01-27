@@ -27,7 +27,12 @@ const routes = ($routeProvider, $httpProvider, $locationProvider) => {
         })
 
         .when('/adminCours', {
-            templateUrl: 'views/adminCours.html'
+            templateUrl: 'views/adminCours.html',
+            controller: 'adminCoursController',
+            controllerAs: 'vm',
+            resolve: {
+                connected: checkIsConnected
+            }
         })
 
         .when('/utilisateur/:id', {

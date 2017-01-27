@@ -11,6 +11,7 @@ angular.module('app', ['ngRoute'])
         .controller('createUserController', createUserController)
         .controller('formationController', formationController)
         .controller('saisonController', saisonController)
+        .controller('adminCoursController', adminCoursController)
         .config(routes)
         .run(loginStatus)
         ;
