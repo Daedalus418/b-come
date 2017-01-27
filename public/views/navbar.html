@@ -9,7 +9,7 @@
                 </li>
                 <li>
                     <a href="#/profil/{{vm.user._id}}" class="navbar_link" ng-show="vm.isLogged">
-                        <i class="material-icons left">account_circle</i>Profil</a>
+                        <i class="material-icons left">account_circle</i>{{vm.user.first_name}}</a>
                 </li>
                 <li>
                     <a href="#/liste" class="navbar_link" ng-model='vm.user.credit' ng-show="vm.isLogged">
