@@ -5,7 +5,6 @@ function navbarController(sessionFactory, $rootScope, $window, $location, $timeo
     this.$rootScope = $rootScope;
     this.$location = $location;
     this.userService = userService;
-console.log(this.userId);
 
     $rootScope.$on('loginStatusChanged', (event, isLogged) => {
         this.isLogged = isLogged;
