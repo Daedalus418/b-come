@@ -3,17 +3,17 @@
 html {
     background-color: #FCFCFC;
     color: #353E9D;
-
 }
-  body {
+
+body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
-  }
+}
 
-  main {
+main {
     flex: 1 0 auto;
-  }
+}
 
 * {
     font-family: 'Fira Sans', sans-serif;
@@ -134,13 +134,18 @@ html {
 
 .blocTri {
     color: grey;
-    margin: 1% 0 1% 0;
+    margin: 1% 0 0 0!important;
 }
 
 .itemTri {
     border: 1px grey solid;
     margin: 0;
     padding: 0;
+}
+
+.form-control {
+    border: 1px #9E9E9E solid!important;
+    height: 1.7rem!important;
 }
 
 .titreFormation {
@@ -156,14 +161,18 @@ html {
     text-align: justify;
 }
 
+.card, .card-content, .card-action {
+    background-color: #e0e0e0!important;
+}
+
 .texteFormation {
-    margin: 3% 3% 3% 3%!important;
-    padding: 3% 3% 3% 3%!important;
+    margin: 1% 1% 1% 1%!important;
+    padding: 2% 2% 2% 2%!important;
 }
 
 .texteFormation1 {
-    margin: 3% 3% 3% 3%!important;
-    padding: 3% 3% 3% 3%!important;
+    margin: 1% 1% 1% 1%!important;
+    padding: 2% 2% 2% 2%!important;
 }
 
 .starFormation {
@@ -196,6 +205,7 @@ html {
     text-decoration: underline;
 }
 
+
 /*Formation*/
 
 .forMarge {
@@ -204,24 +214,69 @@ html {
 }
 
 .quizzMarge {
+    font-size: 16px;
+    font-weight: 300;
     margin-bottom: 3%;
 }
 
+.texteCours {
+    text-align: justify;
+}
+
+.video-container {
+    margin-top: 1%;
+    margin-bottom: 2%;
+}
+
+#titreQuizz {
+  font-size: 35px;
+  font-weight: 600;
+}
+
+#quizzWord {
+    font-size: 18px;
+    font-weight: 500;
+    margin-right: 2%;
+}
+
+.buttonCours {
+    background-color: #353E9D;
+    -webkit-transition: all 0.5s;
+}
+
+.buttonCours:hover {
+    background-color: #F36C91;
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+}
+
+.buttonQuizz {
+    background-color: #353E9D;
+}
+
+.questionQuizz {
+  font-size: 24px;
+  font-weight: 400;
+}
+
 /* Profil*/
+
 .profilMarge {
     margin-top: 1%;
 }
 
+
 /* Admin*/
 
-.btnAdmin{
-  width: 100px!important;
-  height: 100px!important;
+.btnAdmin {
+    width: 100px!important;
+    height: 100px!important;
 }
 
 .btn-floating.btn-large.btnAdmin i {
     line-height: 96px!important;
 }
+
 .btn-large.btnAdmin i {
     font-size: 3.6rem!important;
 }
