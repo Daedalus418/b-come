@@ -1,3 +1,5 @@
+/*Global*/
+
 html {
     background-color: #FCFCFC;
     color: #353E9D;
@@ -194,17 +196,7 @@ html {
     text-decoration: underline;
 }
 
-
-/*Footer*/
-
-footer {
-    background-color: #353D9E!important;
-    padding-bottom: 1.4%;
-}
-
-
-
-/* cour*/
+/*Formation*/
 
 .forMarge {
     margin-top: 3%;
@@ -220,7 +212,7 @@ footer {
     margin-top: 1%;
 }
 
-/* admin*/
+/* Admin*/
 
 .btnAdmin{
   width: 100px!important;
@@ -232,4 +224,12 @@ footer {
 }
 .btn-large.btnAdmin i {
     font-size: 3.6rem!important;
+}
+
+
+/*Footer*/
+
+footer {
+    background-color: #353D9E!important;
+    padding-bottom: 1.4%;
 }
