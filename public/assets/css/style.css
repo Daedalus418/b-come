@@ -11,9 +11,9 @@ body {
     flex-direction: column;
 }
 
-/*main {
+main {
     flex: 1 0 auto;
-}*/
+}
 
 * {
     font-family: 'Fira Sans', sans-serif;
