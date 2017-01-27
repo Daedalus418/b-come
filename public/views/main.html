@@ -1,68 +1,112 @@
-<div class="row">
-    <div class="col s3 m3 l3 currentSeason">
-        <span id="currentSeason1">Saison en cours :
-        </span>
-        <span id="currentSeason2">{{vm.saisons[0].saison.nomsaison}}</span>
-        <!-- <span id="currentSeason2">Le dépassement de soi</span> -->
-    </div>
-    <div class="col s3 m3 l3 oldSeasonsLink">
-        Voir les anciennes saisons {{vm.saisons[1].saison.nomsaison}}
-    </div>
-</div>
-<div class="divider"></div>
 <div class="container">
-    <div class="row col s12 m12 l12 blocBanner">
-        <div class="row col s4 m4 l4">
-            <img class="responsive-img" src="assets/img/oiseau.svg" id="imgHome">
+    <div class="row">
+        <div class="col s3 m3 l3 currentSeason">
+            <span id="currentSeason1">Saison en cours :
+            </span>
+            <span id="currentSeason2">{{vm.saisons[0].saison.nomsaison}}</span>
+            <!-- <span id="currentSeason2">Le dépassement de soi</span> -->
         </div>
-        <div class="row col s8 m8 l8 textHome">
-            <h1 id="accroche">"The secret of getting ahead is getting started."</h1>
-            <p id="auteurAccroche">Mark Twain</p>
+        <div class="col s3 m3 l3 oldSeasonsLink">
+            Voir les anciennes saisons
+            {{vm.saisons[1].saison.nomsaison}}
         </div>
     </div>
-</div>
-<div class="divider"></div>
-<div class="row col s12 m12 l12 blocTri">
-    <div class="col s1 m1 l1 offset-s1 offset-m1 offset-l1">Filtres :</div>
-    <div class="col s1 m1 l1 itemTri center">date</div>
-    <div class="col s1 m1 l1 itemTri center">type</div>
-    <div class="col s1 m1 l1 itemTri center">crédits</div>
-    <div class="col s1 m1 l1 itemTri center">avis</div>
-    <input ng-model="vm.searchText" type="text" class="col s3 m3 l3 offset-l2 form-control" placeholder="Recherche">
-</div>
-<div class="row">
-    <div class="col s4 m4 l4" ng-repeat=" formation in vm.formations">
-        <div class="card grey">
-            <div class="card-image black-text">
-              <a href="#/cour"><img class="responsive-img" src="/assets/img/{{formation.formation.image}}"></a>
+    <div class="divider"></div>
+    <div class="container">
+        <div class="row col s12 m12 l12 blocBanner">
+            <div class="row col s4 m4 l4">
+                <img class="responsive-img" src="assets/img/oiseau.svg">
             </div>
-            <div class="card-content texteFormation">
-                <span class="card-title titreFormation center">{{formation.formation.nomformation}}</span><br>
-                <p class="descriptionFormation">{{formation.formation.description}}</p>
-<div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>                <p><a>7 places restantes</a></p>
-            </div>
-            <div class="card-action texteFormation1">
-                <a>Avis</a>
-                <a>Crédits</a>
-                <a>Type</a>
-                <a href="#/profil/{{vm.userId}}">Inscription</a>
+            <div class="row col s8 m8 l8 textHome">
+                <h1 id="accroche">"The secret of getting ahead is getting started."</h1>
+                <p id="auteurAccroche">Mark Twain</p>
             </div>
         </div>
-        <ul class="collection with-header" ng-show="">
-        <li class="collection-header"><h4>First Names</h4></li>
-        <li class="collection-item"><a>Posté par {{formation.formation.commentaire.commentaireUn.user}}</a> <a> qui a donné {{formation.formation.commentaire.commentaireUn.like}} à cette formation</a><p>{{formation.formation.commentaire.commentaireUn.commentaire}}</p></li>
-        <li class="collection-item"><a>Posté par {{formation.formation.commentaire.commentaireDeux.user}}</a> <a> qui a donné {{formation.formation.commentaire.commentaireDeux.like}} à cette formation</a><p>{{formation.formation.commentaire.commentaireDeux.commentaire}}</p></li>
-        <li class="collection-item"><a>Posté par {{formation.formation.commentaire.commentaireTrois.user}}</a> <a> qui a donné {{formation.formation.commentaire.commentaireTrois.like}} à cette formation</a><p>{{formation.formation.commentaire.commentaireTrois.commentaire}}</p></li>
-        <li class="collection-item"><a>Posté par {{formation.formation.commentaire.commentaireQuatre.user}}</a> <a> qui a donné {{formation.formation.commentaire.commentaireQuatre.like}} à cette formation</a><p>{{formation.formation.commentaire.commentaireQuatre.commentaire}}</p></li>
-      </ul>
     </div>
-    <div id="fb-root"></div>
-    <script>(function(d, s, id) {
-          var js, fjs = d.getElementsByTagName(s)[0];
-          if (d.getElementById(id)) return;
-          js = d.createElement(s); js.id = id;
-          js.src = "//connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v2.8";
-          fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));
-    </script>
+    <div class="divider"></div>
+    <div class="row col s12 m12 l12 blocTri">
+        <div class="col s1 m1 l1 offset-s1 offset-m1 offset-l1">Filtres :</div>
+        <div class="col s1 m1 l1 itemTri center">date</div>
+        <div class="col s1 m1 l1 itemTri center">type</div>
+        <div class="col s1 m1 l1 itemTri center">crédits</div>
+        <div class="col s1 m1 l1 itemTri center">avis</div>
+        <input ng-model="vm.searchText" type="text" class="col s3 m3 l3 offset-l2 form-control" placeholder="Recherche">
+    </div>
+    <div class="row">
+        <div class="col s4 m4 l4" ng-repeat=" formation in vm.formations">
+            <div class="card grey">
+                <div class="card-image black-text">
+                    <a href="#/cour"><img class="responsive-img" src="/assets/img/{{formation.formation.image}}"></a>
+                </div>
+                <div class="card-content texteFormation">
+                    <span class="card-title titreFormation center">{{formation.formation.nomformation}}</span><br>
+                    <p class="descriptionFormation">{{formation.formation.description}}</p>
+                    <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+                    <p>
+                        <a>7 places restantes</a>
+                    </p>
+                </div>
+                <div class="card-action texteFormation1">
+                    <a>Avis</a>
+                    <a>Crédits</a>
+                    <a>Type</a>
+                    <a href="#/profil/{{vm.userId}}">Inscription</a>
+                </div>
+            </div>
+            <ul class="collection with-header" ng-show="">
+                <li class="collection-header">
+                    <h4>First Names</h4>
+                </li>
+                <li class="collection-item">
+                    <a>Posté par
+                        {{formation.formation.commentaire.commentaireUn.user}}</a>
+                    <a>
+                        qui a donné
+                        {{formation.formation.commentaire.commentaireUn.like}}
+                        à cette formation</a>
+                    <p>{{formation.formation.commentaire.commentaireUn.commentaire}}</p>
+                </li>
+                <li class="collection-item">
+                    <a>Posté par
+                        {{formation.formation.commentaire.commentaireDeux.user}}</a>
+                    <a>
+                        qui a donné
+                        {{formation.formation.commentaire.commentaireDeux.like}}
+                        à cette formation</a>
+                    <p>{{formation.formation.commentaire.commentaireDeux.commentaire}}</p>
+                </li>
+                <li class="collection-item">
+                    <a>Posté par
+                        {{formation.formation.commentaire.commentaireTrois.user}}</a>
+                    <a>
+                        qui a donné
+                        {{formation.formation.commentaire.commentaireTrois.like}}
+                        à cette formation</a>
+                    <p>{{formation.formation.commentaire.commentaireTrois.commentaire}}</p>
+                </li>
+                <li class="collection-item">
+                    <a>Posté par
+                        {{formation.formation.commentaire.commentaireQuatre.user}}</a>
+                    <a>
+                        qui a donné
+                        {{formation.formation.commentaire.commentaireQuatre.like}}
+                        à cette formation</a>
+                    <p>{{formation.formation.commentaire.commentaireQuatre.commentaire}}</p>
+                </li>
+            </ul>
+        </div>
+        <div id="fb-root"></div>
+        <script>
+            (function(d, s, id) {
+                var js,
+                    fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id))
+                    return;
+                js = d.createElement(s);
+                js.id = id;
+                js.src = "//connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v2.8";
+                fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
+        </script>
+    </div>
 </div>

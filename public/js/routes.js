@@ -11,23 +11,35 @@ const routes = ($routeProvider, $httpProvider, $locationProvider) => {
         })
 
         .when('/cours', {
-            templateUrl: 'views/cours.html'
+            templateUrl: 'views/cours.html',
+            resolve: {
+                connected: checkIsConnected
+            }
         })
 
         .when('/quizz', {
-            templateUrl: 'views/quizz.html'
+            templateUrl: 'views/quizz.html',
+            resolve: {
+                connected: checkIsConnected
+            }
         })
 
         .when('/profil/:id', {
             templateUrl: 'views/profil.html',
             controller: 'profilController',
             controllerAs: 'vm',
+            resolve: {
+                connected: checkIsConnected
+            }
         })
 
         .when('/admin', {
             templateUrl: 'views/admin.html',
             controller: 'formationController',
             controllerAs: 'vm',
+            resolve: {
+                connected: checkIsConnected
+            }
         })
         .when('/adminCours', {
             templateUrl: 'views/adminCours.html',
@@ -72,12 +84,18 @@ const routes = ($routeProvider, $httpProvider, $locationProvider) => {
         .when('/addformation', {
             templateUrl: 'views/addformation.html',
             controller: 'formationController',
-            controllerAs: 'vm'
+            controllerAs: 'vm',
+            resolve: {
+                connected: checkIsConnected
+            }
         })
         .when('/addsaison', {
             templateUrl: 'views/addsaison.html',
             controller: 'saisonController',
-            controllerAs: 'vm'
+            controllerAs: 'vm',
+            resolve: {
+                connected: checkIsConnected
+            }
         })
 
         .otherwise({

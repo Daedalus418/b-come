@@ -1,7 +1,7 @@
 /*Global*/
 
 html {
-    background-color: #FCFCFC;
+    background-color: #F0F0F0;
     color: #353E9D;
 }
 
@@ -11,16 +11,13 @@ body {
     flex-direction: column;
 }
 
-/*main {
-    flex: 1 0 auto;
-}*/
-
 * {
     font-family: 'Fira Sans', sans-serif;
 }
 
 .divider {
     background-color: #9C9C9C;
+    opacity: 0.5;
 }
 
 
@@ -30,19 +27,12 @@ body {
     background-color: rgba(0, 0, 0, 0);
 }
 
-.iconNav {
-    padding-right: 35%;
-}
-
 .NavBar {
     background-color: #353D9E;
 }
 
 .navbar_logo {
-    height: 100%;
-    max-height: 55px;
-    padding-left: 5%;
-    width: auto;
+    padding-top: 1.2%;
 }
 
 .buttonAdmin {
@@ -80,7 +70,7 @@ body {
 
 .currentSeason {
     font-size: 20px;
-    margin: 1% 0 0 4%!important;
+    margin: 1% 0 0 0!important;
     padding: 0;
 }
 
@@ -108,38 +98,41 @@ body {
 }
 
 #imgHome {
-    margin: 5% 0 0 0;
-    height: auto;
-    width: auto;
+    padding: 2% 2% 0 0;
 }
 
 .textHome {
-    padding: 4% 0 0% 15%!important;
+    padding: 4% 0 0 15%!important;
 }
 
 #accroche {
     color: #353D9E;
-    font-size: 42px;
+    font-size: 35px;
     font-style: italic;
     font-weight: 300;
-    text-align: justify;
+    margin: 0;
+    padding-top: 4%!important;
+    text-align: left;
 }
 
 #auteurAccroche {
     color: red;
     font-size: 28px;
     font-weight: 300;
+    margin: 0;
+    padding-top: 4%!important;
     text-align: left;
 }
 
 .blocTri {
     color: grey;
-    margin: 1% 0 0 0!important;
+    margin: 1.5% 0 0 0!important;
 }
 
 .itemTri {
     border: 1px grey solid;
-    margin: 0;
+    border-radius: 4px;
+    margin: 0 1% 0 1%;
     padding: 0;
 }
 
@@ -267,40 +260,70 @@ body {
 
 /* Profil*/
 
+.textHome1 {
+    padding: 0 0 0 10%!important;
+}
+
+#accroche1 {
+    color: #353D9E;
+    font-size: 30px;
+    font-style: italic;
+    font-weight: 300;
+    margin: 0!important;
+    padding: 0!important;
+    text-align: left;
+}
+
+#auteurAccroche1 {
+    color: red;
+    font-size: 25px;
+    font-weight: 300;
+    margin: 0!important;
+    padding: 0!important;
+    text-align: left;
+}
+
 .profilMarge {
     margin-top: 1%;
 }
 
 .circle {
-  margin-top: 5%;
-  border: white solid 17px;
+    margin-top: 5%;
+    border: white solid 15px;
+}
+
+#imgGuy {
+    position : absolute;
+    height: 50px;
+    width: 50px;
 }
 
 .profileBg {
-  background: rgba(123,127,127,1);
-background: -moz-linear-gradient(bottom, rgba(123,127,127,1) 0%, rgba(187,191,190,1) 18%, rgba(224,229,229,1) 49%, rgba(249,255,254,1) 100%);
-background: -webkit-gradient(bottom, top, color-stop(0%, rgba(123,127,127,1)), color-stop(18%, rgba(187,191,190,1)), color-stop(49%, rgba(224,229,229,1)), color-stop(100%, rgba(249,255,254,1)));
-background: -webkit-linear-gradient(bottom, rgba(123,127,127,1) 0%, rgba(187,191,190,1) 18%, rgba(224,229,229,1) 49%, rgba(249,255,254,1) 100%);
-background: -o-linear-gradient(bottom, rgba(123,127,127,1) 0%, rgba(187,191,190,1) 18%, rgba(224,229,229,1) 49%, rgba(249,255,254,1) 100%);
-background: -ms-linear-gradient(bottom, rgba(123,127,127,1) 0%, rgba(187,191,190,1) 18%, rgba(224,229,229,1) 49%, rgba(249,255,254,1) 100%);
-background: linear-gradient(to top, rgba(123,127,127,1) 0%, rgba(187,191,190,1) 18%, rgba(224,229,229,1) 49%, rgba(249,255,254,1) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f68e0e', endColorstr='#c4cac0', GradientType=1 );
+    background: rgba(123, 127, 127, 1);
+    background: -moz-linear-gradient(bottom, rgba(123, 127, 127, 1) 0%, rgba(187, 191, 190, 1) 18%, rgba(224, 229, 229, 1) 49%, rgba(249, 255, 254, 1) 100%);
+    background: -webkit-gradient(bottom, top, color-stop(0%, rgba(123, 127, 127, 1)), color-stop(18%, rgba(187, 191, 190, 1)), color-stop(49%, rgba(224, 229, 229, 1)), color-stop(100%, rgba(249, 255, 254, 1)));
+    background: -webkit-linear-gradient(bottom, rgba(123, 127, 127, 1) 0%, rgba(187, 191, 190, 1) 18%, rgba(224, 229, 229, 1) 49%, rgba(249, 255, 254, 1) 100%);
+    background: -o-linear-gradient(bottom, rgba(123, 127, 127, 1) 0%, rgba(187, 191, 190, 1) 18%, rgba(224, 229, 229, 1) 49%, rgba(249, 255, 254, 1) 100%);
+    background: -ms-linear-gradient(bottom, rgba(123, 127, 127, 1) 0%, rgba(187, 191, 190, 1) 18%, rgba(224, 229, 229, 1) 49%, rgba(249, 255, 254, 1) 100%);
+    background: linear-gradient(to top, rgba(123, 127, 127, 1) 0%, rgba(187, 191, 190, 1) 18%, rgba(224, 229, 229, 1) 49%, rgba(249, 255, 254, 1) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#f68e0e', endColorstr='#c4cac0', GradientType=1);
 }
 
 .profileSize {
-  font-weight: 800;
-  font-size: 2rem;
+    font-weight: 800;
+    font-size: 2rem;
 }
 
 .profileColor {
-  color: white;
-  font-size: 1.5rem;
+    color: white;
+    font-size: 1.5rem;
 }
 
 .profileBorder {
-  border: white solid 1px;
-  border-radius: 5px;
+    border: white solid 1px;
+    border-radius: 5px;
 }
+
 
 /* Admin*/
 
@@ -322,13 +345,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f68e0e', end
 }
 
 .imgAdmin {
-    margin-top: 1%;
+    margin-top: 2%;
 }
 
 .titreAdmin {
     font-size: 25px;
     font-weight: 300;
-    padding: 5% 0 0 0;
+    padding: 5% 0 5% 0;
 }
 
 #titreAdminFormation {
@@ -347,12 +370,4 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f68e0e', end
     font-weight: 300;
     margin: 0;
     padding-top: 4.5%;
-}
-
-
-/*Footer*/
-
-footer {
-    background-color: #353D9E!important;
-    padding-bottom: 1.4%;
 }

@@ -1,20 +1,22 @@
-
-<div class='profileBg'>
-    <div class="center">
-        <img class="circle" src="assets/img/guy.png">
-        <p class="center profileSize">{{vm.user.first_name}} {{vm.user.last_name}}</p>
-        <div class="row">
-        <div class='pink-text lighten-2 col s2 offset-s4'>{{vm.user.credit}}<i class="material-icons">star</i>restants</div>
-        <div class='col s2'>{{vm.user.credit}}<i class="material-icons">star</i>utilisés</div>
-      </div>
+<div class="container">
+    <div class="row col s12 m12 l12 blocBanner">
+        <div class="row col s4 m4 l4">
+            <img class="responsive-img" src="assets/img/guy.png" id="imgHome">
+        </div>
+        <div class="row col s8 m8 l8 textHome1">
+            <h1 id="accroche">{{vm.user.first_name}}
+                {{vm.user.last_name}}</h1>
+            <p id="auteurAccroche">3$ utilisés et 3$ restants</p>
+        </div>
     </div>
-
     <div class="row">
         <ul class="collection">
             <li class="grey darken-4 collection-item avatar">
                 <div class="col s12">
-                    <div class="col s4 profilMarge profileColor">Saison</p></div>
-                    <div class="col s4 profilMarge profileColor">Thème</p></div>
+                    <div class="col s4 profilMarge profileColor">Saison
+                    </div>
+                    <div class="col s4 profilMarge profileColor">Thème
+                    </div>
                     <div class="input-field col s4 profileColor">
                         <i class="material-icons prefix">&#xE8B6;</i>
                         <input ng-model="vm.searchText" type="text" class="form-control" placeholder="Recherche">
@@ -23,13 +25,14 @@
             </li>
         </ul>
     </div>
-
     <div ng-hide="vm.hideMe == 'ligne'" class="row">
         <ul class="collection">
             <li class="white darken-4 collection-item avatar">
                 <div class="col s12">
-                    <div class="col s4 profilMarge black-text">Saison 1</p></div>
-                    <div class="col s4 profilMarge black-text">Gestion du temp</p></div>
+                    <div class="col s4 profilMarge black-text">Saison 1
+                    </div>
+                    <div class="col s4 profilMarge black-text">Gestion du temps
+                    </div>
                     <div class="col s1">
                         <a ng-click="vm.deleteLigne()" class="btn-floating btn-large waves-effect waves-light red accent-4 right">
                             <i class="material-icons">&#xE872;</i>
@@ -39,3 +42,4 @@
             </li>
         </ul>
     </div>
+</div>
