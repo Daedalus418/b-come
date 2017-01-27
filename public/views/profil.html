@@ -1,8 +1,8 @@
 <div class="center">
   <img class="circle" src="assets/img/guy.png">
   <h1 class="center">Profil</h1>
-  <p ng-model='vm.user.first_name'class="center">{{user.first_name}}</p>
-  <p ng-model='vm.user.last_name' class="center">{{user.last_name}}</p>
+  <p ng-model='vm.user.first_name'class="center">{{vm.user.first_name}}</p>
+  <p ng-model='vm.user.last_name' class="center">{{vm.user.last_name}}</p>
 </div>
 
 <div class="row">
@@ -21,34 +21,14 @@
     </ul>
   </div>
 
-    <!-- <div id="modal-{{$index}}" class="modal blue-text" ng-repeat="user in vm.users">
-        <div class="modal-content">
-            <h4 class="center">Êtes-vous sûr(e) de vouloir supprimer ce compte ?</h4>
-            <div class="center">
-                <a class="modal-close waves-effect waves-light btn white red-text">
-                    <i class="material-icons left">&#xE5CD;</i>Non</a>
-                <button ng-click="vm.delete(user)" class="waves-effect waves-light btn white green-text modal-close">
-                    <i class="material-icons left">&#xE5CA;</i>Oui</button>
-            </div>
-        </div>
-    </div> -->
 
+  <!-- <div>
     <ul class="collection">
         <li ng-repeat="user in vm.users | filter:vm.searchText" class="collection-item avatar">
             <div class="col s4 textuel">{{user.first_name}}</div>
             <div class="col s4 textuel">{{user.last_name}}</div>
             <div class="col s4 textuel">{{user.bij}}</div>
 
-            <div class="col s2">
-                <!-- <a href='/#/utilisateur/{{user._id}}' class="btn-floating btn-large waves-effect waves-light grey right">
-                    <i class="material-icons">&#xE8B8;</i>
-                </a>
-            </div>
-            <div class="col s1">
-                <a data-target="modal-{{$index}}" class="btn-floating btn-large waves-effect waves-light red accent-4 right">
-                    <i class="material-icons">&#xE872;</i>
-                </a> -->
-            </div>
         </li>
     </ul>
-</div>
+</div> -->

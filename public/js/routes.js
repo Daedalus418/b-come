@@ -7,20 +7,25 @@ const routes = ($routeProvider, $httpProvider, $locationProvider) => {
                 connected: checkIsConnected
             }
         })
-        .when('/cour', {
-            templateUrl: 'views/cour.html'
+
+        .when('/cours', {
+            templateUrl: 'views/cours.html'
         })
+
         .when('/quizz', {
             templateUrl: 'views/quizz.html'
         })
+
         .when('/profil/:id', {
             templateUrl: 'views/profil.html',
             controller: 'profilController',
             controllerAs: 'vm',
         })
+
         .when('/admin', {
             templateUrl: 'views/admin.html'
         })
+
         .when('/utilisateur/:id', {
             templateUrl: 'views/editUser.html',
             controller: 'editUserController',
@@ -29,6 +34,7 @@ const routes = ($routeProvider, $httpProvider, $locationProvider) => {
                 connected: checkIsConnected
             }
         })
+
         .when('/utilisateur', {
             templateUrl: 'views/createUser.html',
             controller: 'createUserController',
@@ -45,6 +51,7 @@ const routes = ($routeProvider, $httpProvider, $locationProvider) => {
                 connected: checkIsConnected
             }
         })
+
         .when('/login', {
             templateUrl: 'views/login.html',
             controller: 'loginController',
@@ -60,6 +67,7 @@ const routes = ($routeProvider, $httpProvider, $locationProvider) => {
             controller: 'saisonController',
             controllerAs: 'vm'
         })
+
         .otherwise({
             redirectTo: '/'
         });
