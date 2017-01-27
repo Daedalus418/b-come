@@ -13,7 +13,7 @@ function navbarController(sessionFactory, $rootScope, $window, $location, $timeo
     });
 
     this.load = () => {
-        this.userService.getOne(this.userId).then((res) => {
+        this.userService.getOne(this.sessionFactory.user._id).then((res) => {
             this.user = res.data;
         });
     };
