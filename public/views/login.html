@@ -12,6 +12,6 @@
 <div class="input-field center">
   <button ng-click='vm.login()' ng-disabled="formConnect.$invalid" class="btn btnconnect center">Connexion</button>
 </div>
-<div ng-show="(vm.loginMessage)" class="alert white-text center" ng-class="{'alert-danger': vm.loginMessage.type == 'error', 'alert-success': vm.loginMessage.type == 'success', 'alert-info': vm.loginMessage.type == 'info'}">
+<div ng-show="(vm.loginMessage)" class="alert center" ng-class="{'alert-danger': vm.loginMessage.type == 'error', 'alert-success': vm.loginMessage.type == 'success', 'alert-info': vm.loginMessage.type == 'info'}">
     <p>{{vm.loginMessage.message}}</p>
   </div>

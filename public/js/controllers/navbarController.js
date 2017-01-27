@@ -6,14 +6,13 @@ function navbarController(sessionFactory, $rootScope, $window, $location, $timeo
     this.$location = $location;
     this.userService = userService;
 
-
     $rootScope.$on('loginStatusChanged', (event, isLogged) => {
         this.isLogged = isLogged;
         this.user = sessionFactory.user;
     });
 
     this.load = () => {
-        this.userService.getOne(this.userId).then((res) => {
+        this.userService.getOne(this.sessionFactory.user._id).then((res) => {
             this.user = res.data;
         });
     };
