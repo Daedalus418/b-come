@@ -45,8 +45,16 @@
                 <a>Avis</a>
                 <a>Crédits</a>
                 <a>Type</a>
+                <a href="#/profil/{{vm.userId}}">Inscription</a>
             </div>
         </div>
+        <ul class="collection with-header" ng-show="">
+        <li class="collection-header"><h4>First Names</h4></li>
+        <li class="collection-item"><a>Posté par {{formation.formation.commentaire.commentaireUn.user}}</a> <a> qui a donné {{formation.formation.commentaire.commentaireUn.like}} à cette formation</a><p>{{formation.formation.commentaire.commentaireUn.commentaire}}</p></li>
+        <li class="collection-item"><a>Posté par {{formation.formation.commentaire.commentaireDeux.user}}</a> <a> qui a donné {{formation.formation.commentaire.commentaireDeux.like}} à cette formation</a><p>{{formation.formation.commentaire.commentaireDeux.commentaire}}</p></li>
+        <li class="collection-item"><a>Posté par {{formation.formation.commentaire.commentaireTrois.user}}</a> <a> qui a donné {{formation.formation.commentaire.commentaireTrois.like}} à cette formation</a><p>{{formation.formation.commentaire.commentaireTrois.commentaire}}</p></li>
+        <li class="collection-item"><a>Posté par {{formation.formation.commentaire.commentaireQuatre.user}}</a> <a> qui a donné {{formation.formation.commentaire.commentaireQuatre.like}} à cette formation</a><p>{{formation.formation.commentaire.commentaireQuatre.commentaire}}</p></li>
+      </ul>
     </div>
     <div id="fb-root"></div>
     <script>(function(d, s, id) {

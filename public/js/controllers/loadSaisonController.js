@@ -1,4 +1,6 @@
-function loadSaisonController(formationService, saisonService, $timeout) {
+function loadSaisonController(formationService, saisonService, $timeout, sessionFactory) {
+    this.userId = sessionFactory.user._id;
+    console.log(this.userId);
     this.formation = {};
     this.formationService = formationService;
     this.saison = {};
