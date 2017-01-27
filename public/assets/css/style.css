@@ -11,9 +11,9 @@ body {
     flex-direction: column;
 }
 
-main {
+/*main {
     flex: 1 0 auto;
-}
+}*/
 
 * {
     font-family: 'Fira Sans', sans-serif;
@@ -206,7 +206,7 @@ main {
 }
 
 
-/*Formation*/
+/*Formation + Quizz*/
 
 .forMarge {
     margin-top: 3%;
@@ -229,6 +229,11 @@ main {
 }
 
 #titreQuizz {
+    font-size: 35px;
+    font-weight: 600;
+}
+
+#titreFormation {
     font-size: 35px;
     font-weight: 600;
 }
@@ -293,6 +298,25 @@ main {
 .titreAdmin {
     font-size: 25px;
     font-weight: 300;
+    padding: 5% 0 0 0;
+}
+
+#titreAdminFormation {
+    font-size: 30px;
+    font-weight: 400;
+}
+
+#backAdminCours {
+    font-size: 16px;
+    font-weight: 300;
+    margin-top: 5%;
+}
+
+#backAdminHome {
+    font-size: 16px;
+    font-weight: 300;
+    margin: 0;
+    padding-top: 4.5%;
 }
 
 
