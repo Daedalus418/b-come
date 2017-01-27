@@ -265,6 +265,36 @@ main {
     margin-top: 1%;
 }
 
+.circle {
+  margin-top: 5%;
+  border: white solid 17px;
+}
+
+.profileBg {
+  background: rgba(123,127,127,1);
+background: -moz-linear-gradient(bottom, rgba(123,127,127,1) 0%, rgba(187,191,190,1) 18%, rgba(224,229,229,1) 49%, rgba(249,255,254,1) 100%);
+background: -webkit-gradient(bottom, top, color-stop(0%, rgba(123,127,127,1)), color-stop(18%, rgba(187,191,190,1)), color-stop(49%, rgba(224,229,229,1)), color-stop(100%, rgba(249,255,254,1)));
+background: -webkit-linear-gradient(bottom, rgba(123,127,127,1) 0%, rgba(187,191,190,1) 18%, rgba(224,229,229,1) 49%, rgba(249,255,254,1) 100%);
+background: -o-linear-gradient(bottom, rgba(123,127,127,1) 0%, rgba(187,191,190,1) 18%, rgba(224,229,229,1) 49%, rgba(249,255,254,1) 100%);
+background: -ms-linear-gradient(bottom, rgba(123,127,127,1) 0%, rgba(187,191,190,1) 18%, rgba(224,229,229,1) 49%, rgba(249,255,254,1) 100%);
+background: linear-gradient(to top, rgba(123,127,127,1) 0%, rgba(187,191,190,1) 18%, rgba(224,229,229,1) 49%, rgba(249,255,254,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f68e0e', endColorstr='#c4cac0', GradientType=1 );
+}
+
+.profileSize {
+  font-weight: 800;
+  font-size: 2rem;
+}
+
+.profileColor {
+  color: white;
+  font-size: 1.5rem;
+}
+
+.profileBorder {
+  border: white solid 1px;
+  border-radius: 5px;
+}
 
 /* Admin*/
 
