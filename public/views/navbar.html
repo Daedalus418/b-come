@@ -3,20 +3,26 @@
       <a href="#/"><img class="navbar_logo" src="assets/img/logo.svg"></a>
         <ul class="right">
             <li>
+              <a href="" class="navbar_link" ng-model='vm.user.first_name' ng-show="vm.isLogged">
+                  <span>Bienvenue, {{vm.user.first_name}}</span>
+              </a>
+            </li>
+            <li>
                 <a href="#/" class="navbar_link">
                     <i class="material-icons left">home</i>Accueil</a>
             </li>
             <li>
-                <a href="#/profil" class="navbar_link">
-                    <i class="material-icons left">person_outline</i>Profil</a>
+                <a href="#/profil/{{vm.user._id}}" class="navbar_link" ng-show="vm.isLogged">
+                    <i class="material-icons left">&#xE8A6;</i>Profil</a>
             </li>
             <li>
-                <a href="#/liste" class="navbar_link">
-                    <i class="material-icons left">star</i>20</a>
+                <a href="#/liste" class="navbar_link" ng-model='vm.user.credit' ng-show="vm.isLogged">
+                    <i class="material-icons left">star;</i>{{vm.user.credit}}</a>
             </li>
-            <li ng-hide='vm.isLogged'>
+            <li ng-show='vm.isLogged'>
                 <a href='#/login' ng-click='vm.logout()' class="navbar_link">
                     <i class="material-icons left">exit_to_app</i>Déconnecter</a>
             </li>
         </ul>
-    </div>
+      </div>
+    </nav>

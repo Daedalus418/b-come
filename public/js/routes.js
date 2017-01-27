@@ -14,10 +14,15 @@ const routes = ($routeProvider, $httpProvider, $locationProvider) => {
             templateUrl: 'views/quizz.html'
         })
         .when('/profil', {
-            templateUrl: 'views/profil.html'
+            templateUrl: 'views/profil.html',
+            controller: 'profilController',
+            controllerAs: 'vm',
         })
         .when('/admin', {
             templateUrl: 'views/admin.html'
+        })
+        .when('/home', {
+            templateUrl: 'views/home.html'
         })
         .when('/utilisateur/:id', {
             templateUrl: 'views/editUser.html',
