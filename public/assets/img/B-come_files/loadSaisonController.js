@@ -37,14 +37,6 @@ console.log(this.index0);
               console.log(this.formations);
               $timeout(() => {
                 $('.modal').modal();
-                $(document).ready(function(){
-                  $('.rating0').addRating(3);
-                  $('.rating1').addRating();
-                  $('.rating2').addRating();
-                  $('.rating3').addRating();
-                  $('.rating4').addRating();
-                  $('.rating5').addRating();
-                })
               }, 0);
         });
     };

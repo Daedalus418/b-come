@@ -6,7 +6,8 @@
         <!-- <span id="currentSeason2">Le dépassement de soi</span> -->
     </div>
     <div class="col s3 m3 l3 oldSeasonsLink">
-        Voir les anciennes saisons {{vm.saisons[1].saison.nomsaison}}
+        Voir les anciennes saisons
+        {{vm.saisons[1].saison.nomsaison}}
     </div>
 </div>
 <div class="divider"></div>
@@ -31,38 +32,116 @@
     <input ng-model="vm.searchText" type="text" class="col s3 m3 l3 offset-l2 form-control" placeholder="Recherche">
 </div>
 <div class="row">
-    <div class="col s4 m4 l4" ng-repeat=" formation in vm.formations">
+    <div class="col s4 m4 l4" ng-repeat=" formation in vm.formations" ng-init="editViewActive = fasle">
         <div class="card grey">
             <div class="card-image black-text">
-              <a href="#/cour"><img class="responsive-img" src="/assets/img/{{formation.formation.image}}"></a>
+                <a href="#/cour"><img class="responsive-img" src="/assets/img/{{formation.formation.image}}"></a>
             </div>
             <div class="card-content texteFormation">
                 <span class="card-title titreFormation center">{{formation.formation.nomformation}}</span><br>
                 <p class="descriptionFormation">{{formation.formation.description}}</p>
-<div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>                <p><a>7 places restantes</a></p>
+                <div class="row"><br>
+                    <!-- <div class="col s6"><div class="rating{{$index}}"></div></div> -->
+                    <div class="col s6"><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star_border</i><i class="material-icons">star_border</i></div>
+                    <div class="col s6">7 places restantes</div>
+                </div>
             </div>
+            <a>{{formation.formation.credit}}   crédits    </a> <a>/    {{formation.formation.format}}</a>
             <div class="card-action texteFormation1">
-                <a>Avis</a>
-                <a>Crédits</a>
-                <a>Type</a>
+                <!-- <a ng-click="editViewActive = !editViewActive">Avis</a> -->
+                <a data-target="modal{{$index}}" class="">En savoir plus</a>
                 <a href="#/profil/{{vm.userId}}">Inscription</a>
             </div>
         </div>
-        <ul class="collection with-header" ng-show="">
-        <li class="collection-header"><h4>First Names</h4></li>
-        <li class="collection-item"><a>Posté par {{formation.formation.commentaire.commentaireUn.user}}</a> <a> qui a donné {{formation.formation.commentaire.commentaireUn.like}} à cette formation</a><p>{{formation.formation.commentaire.commentaireUn.commentaire}}</p></li>
-        <li class="collection-item"><a>Posté par {{formation.formation.commentaire.commentaireDeux.user}}</a> <a> qui a donné {{formation.formation.commentaire.commentaireDeux.like}} à cette formation</a><p>{{formation.formation.commentaire.commentaireDeux.commentaire}}</p></li>
-        <li class="collection-item"><a>Posté par {{formation.formation.commentaire.commentaireTrois.user}}</a> <a> qui a donné {{formation.formation.commentaire.commentaireTrois.like}} à cette formation</a><p>{{formation.formation.commentaire.commentaireTrois.commentaire}}</p></li>
-        <li class="collection-item"><a>Posté par {{formation.formation.commentaire.commentaireQuatre.user}}</a> <a> qui a donné {{formation.formation.commentaire.commentaireQuatre.like}} à cette formation</a><p>{{formation.formation.commentaire.commentaireQuatre.commentaire}}</p></li>
-      </ul>
     </div>
-    <div id="fb-root"></div>
-    <script>(function(d, s, id) {
-          var js, fjs = d.getElementsByTagName(s)[0];
-          if (d.getElementById(id)) return;
-          js = d.createElement(s); js.id = id;
-          js.src = "//connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v2.8";
-          fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));
-    </script>
+</div>
+
+<div id="modal0" class="modal blue-text">
+    <div class="modal-content">
+        <h4 class="center">Les bases de la gestion de temps.</h4>
+        <div class="center row col s12">
+            <img class="responsive-img col s6" src="/assets/img/{{vm.formations[0].formation.image}}">
+            <ul class="collection with-header">
+                <li class="collection-header">
+                    <h4>avis pour la formation
+                        {{vm.formations[0].formation.nomformation}}</h4>
+                </li>
+                <li class="collection-item">
+                    <a>Posté par
+                        {{vm.formations[0].formation.commentaire.commentaireUn.user}}</a>
+                    <a>
+                        qui a donné
+                        {{vm.formations[0].formation.commentaire.commentaireUn.like}}
+                        à cette formation</a>
+                    <p class="grey-text">{{vm.formations[0].formation.commentaire.commentaireUn.commentaire}}</p>
+                </li>
+                <li class="collection-item">
+                    <a>Posté par
+                        {{vm.formations[0].formation.commentaire.commentaireDeux.user}}</a>
+                    <a>
+                        qui a donné
+                        {{vm.formations[0].formation.commentaire.commentaireDeux.like}}
+                        à cette formation</a>
+                    <p class="grey-text">{{vm.formations[0].formation.commentaire.commentaireDeux.commentaire}}</p>
+                </li>
+                <li class="collection-item">
+                    <a>Posté par
+                        {{vm.formations[0].formation.commentaire.commentaireTrois.user}}</a>
+                    <a>
+                        qui a donné
+                        {{vm.formations[0].formation.commentaire.commentaireTrois.like}}
+                        à cette formation</a>
+                    <p class="grey-text">{{vm.formations[0].formation.commentaire.commentaireTrois.commentaire}}</p>
+                </li>
+            </ul>
+            <p class="center col s6">Avez-vous remarqué que les problèmes viennent souvent plus des attitudes que des aptitudes ? Encore faut-il avoir la juste attitude, le comportement adapté à l’emploi, la fonction …</p>
+            <a class="modal-close waves-effect waves-light btn white red-text">
+                <i class="material-icons left">&#xE5CD;</i>Sortie</a>
+        </div>
+    </div>
+</div>
+
+<div id="modal1" class="modal blue-text">
+    <div class="modal-content">
+        <h4 class="center">Les bases de la gestion de temps.</h4>
+        <div class="center row col s12">
+            <img class="responsive-img col s6" src="/assets/img/{{vm.formations[1].formation.image}}">
+            <ul class="collection with-header">
+                <li class="collection-header">
+                    <h4>avis pour la formation
+                        {{vm.formations[1].formation.nomformation}}</h4>
+                </li>
+                <li class="collection-item">
+                    <a>Posté par
+                        {{vm.formations[1].formation.commentaire.commentaireUn.user}}</a>
+                    <a>
+                        qui a donné
+                        {{vm.formations[1].formation.commentaire.commentaireUn.like}}
+                        à cette formation</a>
+                    <p class="grey-text">{{vm.formations[1].formation.commentaire.commentaireUn.commentaire}}</p>
+                </li>
+                <li class="collection-item">
+                    <a>Posté par
+                        {{vm.formations[1].formation.commentaire.commentaireDeux.user}}</a>
+                    <a>
+                        qui a donné
+                        {{vm.formations[1].formation.commentaire.commentaireDeux.like}}
+                        à cette formation</a>
+                    <p class="grey-text">{{vm.formations[1].formation.commentaire.commentaireDeux.commentaire}}</p>
+                </li>
+                <li class="collection-item">
+                    <a>Posté par
+                        {{vm.formations[1].formation.commentaire.commentaireTrois.user}}</a>
+                    <a>
+                        qui a donné
+                        {{vm.formations[1].formation.commentaire.commentaireTrois.like}}
+                        à cette formation</a>
+                    <p class="grey-text">{{vm.formations[1].formation.commentaire.commentaireTrois.commentaire}}</p>
+                </li>
+            </ul>
+            <p class="center col s6">Avez-vous remarqué que les problèmes viennent souvent plus des attitudes que des aptitudes ? Encore faut-il avoir la juste attitude, le comportement adapté à l’emploi, la fonction …</p>
+            <a class="modal-close waves-effect waves-light btn white red-text">
+                <i class="material-icons left">&#xE5CD;</i>Sortie</a>
+        </div>
+    </div>
 </div>
