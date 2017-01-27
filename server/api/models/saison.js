@@ -1,75 +1,10 @@
 import mongoose from 'mongoose';
 
 const saisonSchema = new mongoose.Schema({
-    formation: {
-        nomformation: String,
-        image: String,
+    saison: {
+        nomsaison: String,
         description: String,
-        date: String,
-        place: Number,
-        placedispo: Number,
-        lien: String,
-        lieu: String,
-        contenu: {
-            contenuUn: {
-                lien: String,
-                descriptioncontenu: String
-            },
-            contenuDeux: {
-                lien: String,
-                descriptioncontenu: String
-            },
-            contenuTrois: {
-                lien: String,
-                descriptioncontenu: String
-            }
-        },
-        commentaire: {
-            commentaireUn: {
-                user: String,
-                commentaire: String,
-                like: Number
-            },
-            commentaireDeux: {
-                user: String,
-                commentaire: String,
-                like: Number
-            },
-            commentaireTrois: {
-                user: String,
-                commentaire: String,
-                like: Number
-            },
-            commentaireQuatre: {
-                user: String,
-                commentaire: String,
-                like: Number
-            },
-            commentaireCinq: {
-                user: String,
-                commentaire: String,
-                like: Number
-            },
-            commentaireSix: {
-                user: String,
-                commentaire: String,
-                like: Number
-            }
-        },
-        quizz: {
-            userUn: {
-                nom: String,
-                result: Number
-            },
-            userDeux: {
-                nom: String,
-                result: Number
-            },
-            userTrois: {
-                nom: String,
-                result: Number
-            }
-        }
+        idformation: []
     }
 });
 
@@ -78,7 +13,6 @@ let model = mongoose.model('Saison', saisonSchema);
 export default class Saison {
 
     findAll(req, res) {
-        console.log(req);
         model.find({}, (err, saisons) => {
             if (err) {
                 res.sendStatus(403);
@@ -99,7 +33,7 @@ export default class Saison {
     }
 
     create(req, res) {
-      console.log(req.body, res);
+        console.log(req.body);
         model.create(req.body,
             (err, saison) => {
                 if (err) {

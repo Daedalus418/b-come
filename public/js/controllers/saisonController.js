@@ -9,15 +9,10 @@ function saisonController(saisonService, $timeout) {
     };
 
     this.create = () => {
-      console.log(this.saison);
       this.saisonService.create(this.saison).then(() => {
-        // this.nom = '';
-        // this.prenom = '';
-        // this.email = '';
-        // this.telephone = '';
-        // this.password = '';
-        // this.fonction = '';
-        // this.indice = '';
+        // this.saison.nomsaison = '';
+        // this.saison.description = '';
+        // this.saison.idformation = '';
       });
     };
 

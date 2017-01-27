@@ -1,0 +1,18 @@
+<div class="row col s12 z-depth-3">
+  <div class="input-field col s6">
+      <input type="text" class="validate" id="nomsaison" ng-model='vm.saison.saison.nomsaison'>
+      <label for="formation">Nom de la saison</label>
+  </div>
+  <div class="input-field col s6">
+      <input type="text" class="validate" id="descriptionsaison" ng-model='vm.saison.saison.description' ng-required='true'>
+      <label for="last_name">Description de la saison</label>
+  </div>
+  <div class="input-field col s3">
+    <input type="text" class="validate" id="iDformation" ng-model='vm.saison.saison.idformation' ng-required='true'>
+    <label for="last_name">Id des formations liées à la saison</label>
+  </div>
+<div class="row col s12">
+    <div class="center">
+        <a class="waves-effect waves-light btn white green-text" ng-click='vm.create()'><i class="material-icons left">&#xE5CA;</i>Valider</a>
+    </div>
+</div>
