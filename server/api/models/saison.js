@@ -5,20 +5,21 @@ const saisonSchema = new mongoose.Schema({
         nomformation: String,
         image: String,
         description: String,
-        date: Date,
+        date: String,
         place: Number,
         placedispo: Number,
         lien: String,
+        lieu: String,
         contenu: {
-            ContenuUn: {
+            contenuUn: {
                 lien: String,
                 descriptioncontenu: String
             },
-            ContenuDeux: {
+            contenuDeux: {
                 lien: String,
                 descriptioncontenu: String
             },
-            ContenuTrois: {
+            contenuTrois: {
                 lien: String,
                 descriptioncontenu: String
             }
@@ -98,7 +99,7 @@ export default class Saison {
     }
 
     create(req, res) {
-      console.log(req, res);
+      console.log(req.body, res);
         model.create(req.body,
             (err, saison) => {
                 if (err) {

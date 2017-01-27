@@ -7,7 +7,7 @@ module.exports = (app) => {
 
     var saison = new Saison();
 
-    router.get('/steph', saison.findAll);
+    router.get('/formation', saison.findAll);
 
     router.get('/formation:id', saison.findById);
 

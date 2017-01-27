@@ -9,7 +9,7 @@ function saisonController(saisonService, $timeout) {
     };
 
     this.create = () => {
-      debugger;
+      console.log(this.saison);
       this.saisonService.create(this.saison).then(() => {
         // this.nom = '';
         // this.prenom = '';
