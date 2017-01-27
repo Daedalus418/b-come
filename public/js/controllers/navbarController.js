@@ -1,14 +1,22 @@
-function navbarController(sessionFactory, $rootScope, $window, $location) {
+function navbarController(sessionFactory, $rootScope, $window, $location, $timeout, userService) {
 
     this.isLogged = sessionFactory.isLogged;
     this.sessionFactory = sessionFactory;
     this.$rootScope = $rootScope;
     this.$location = $location;
+    this.userService = userService;
+
 
     $rootScope.$on('loginStatusChanged', (event, isLogged) => {
         this.isLogged = isLogged;
         this.user = sessionFactory.user;
     });
+
+    this.load = () => {
+        this.userService.getOne(this.userId).then((res) => {
+            this.user = res.data;
+        });
+    };
 
     this.logout = () => {
         this.sessionFactory.isLogged = false;
@@ -19,4 +27,5 @@ function navbarController(sessionFactory, $rootScope, $window, $location) {
         this.$location.path('/login');
     };
 
+    this.load();
 }
