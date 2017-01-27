@@ -1,4 +1,4 @@
-function updateUserController(userService, $routeParams) {
+function editUserController(userService, $routeParams) {
 
     this.userService = userService;
     this.userId = $routeParams.id;

@@ -14,6 +14,7 @@ function createUserController(userService, sessionFactory, $timeout, $location, 
             email: this.email,
             password: this.password,
             poste: this.poste,
+            credit: this.credit,
             isAdmin: this.isadmin
         }).then((res) => {
             this.loginMessage = {};

@@ -18,13 +18,13 @@
 				<input type="password" class="validate" id="password" ng-model='vm.user.password'>
 				<label for="password">{{vm.user.password || "Mot de passe"}}</label>
 			</div>
+			<div class="row blue-text col s6">
+				<input type="text" id="poste" ng-model='vm.user.poste'>
+				<label for="poste">{{vm.user.poste || "Poste"}}</label>
+	    </div>
 			<div class="input-field col s6">
-				<input type="text" class="validate" id="bij" ng-model='vm.user.bij'>
-				<label for="bij">{{vm.user.bij || "Structure (BIJ, UNIJ, etc)"}}</label>
-			</div>
-			<div class="input-field col s6">
-				<input type="text" class="validate" id="number" ng-model='vm.user.number'>
-				<label for="number">{{vm.user.number || "Numéro de département"}}</label>
+				<input type="text" class="validate" id="credit" ng-model='vm.user.credit'>
+				<label for="credit">{{vm.user.credit || "Nombre de crédits"}}</label>
 			</div>
 			<div class="input-field col s12 ">
 				<input type="checkbox" class="checkbox-indigo" id="isadmin" ng-model='vm.user.isAdmin' />

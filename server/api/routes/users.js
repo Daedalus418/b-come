@@ -18,6 +18,8 @@ module.exports = (app) => {
 
     router.get('/:id', /*Auth.isAdministrator,*/ user.findById);
 
+    // router.get('/profil:id', /*Auth.isAdministrator,*/ user.findById);
+
     router.post('/', user.create);
 
     router.put('/:id', /*Auth.isAdministrator,*/ user.update);

@@ -1,14 +1,35 @@
-/* Global*/
+html {
+    background-color: #FCFCFC;
+    color: #353E9D;
+
+}
+  body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+  main {
+    flex: 1 0 auto;
+  }
 
 * {
-    font-family: 'fira sans';
+    font-family: 'Fira Sans', sans-serif;
+}
+
+.divider {
+    background-color: #9C9C9C;
 }
 
 
 /* NavBar*/
 
+.navbarName nav ul a:hover {
+    background-color: rgba(0, 0, 0, 0);
+}
+
 .iconNav {
-    padding-right: 15%;
+    padding-right: 35%;
 }
 
 .NavBar {
@@ -18,173 +39,201 @@
 .navbar_logo {
     height: 100%;
     max-height: 55px;
-    padding-left: 2%;
+    padding-left: 5%;
     width: auto;
 }
 
 .buttonAdmin {
+    font-size: 20px;
     font-weight: bold;
-
-}
-
-footer {
-    background-color: #353D9E!important;
-    padding-bottom: 1%;
 }
 
 
-/*html {
-    color: white
+/*Login*/
+
+.connect {
+    margin-right: 35%;
+    margin-left: 35%;
+    margin-top: 10%;
 }
 
-body {
-    background-color: rgb(45, 78, 130);
-    font-style: Roboto;
+.btnconnect {
+    width: 27%;
 }
 
-
-/*.BlueBackground {
-    background-color: rgb(45, 78, 130);
+.form-control {
+    padding-left: 10px!important;
 }
 
-.whiteFont {
-    color: rgb(255, 255, 255);
+.marge {
+    margin-bottom: -6%;
 }
 
 .blueFont {
-    color: rgb(45, 78, 130);
+    color: #353E9D;
 }
 
-.whiteBackground {
-    background-color: rgb(255, 255, 255);
-}*/
 
+/*Home*/
 
-/*input {
-    color: white!important;
-    border-bottom: 1px solid white!important;
+.homePage {
+    background-color: #DEDEDE;
 }
 
-.input-field label {
-    color: white!important;
-}*/
-
-
-/* NAVBAR*/
-
-
-/*.right, .right li, .right li a, .right li a i {
-    height: 6vh;
-    line-height: 6vh;
+.currentSeason {
+    font-size: 20px;
+    margin: 1% 0 0 4%!important;
+    padding: 0;
 }
 
-.right a {
-    font-size: 1rem;
+#currentSeason1 {
+    color: #353D9E;
+    font-weight: 400;
+    font-size: 14px;
 }
 
-.navbar_link {
-    color: white;
+#currentSeason2 {
+    color: #F03ED5;
+    font-weight: 400;
+    font-size: 14px;
 }
 
-nav ul a {
-    color: white;
+.oldSeasonsLink {
+    color: grey;
+    font-weight: 400;
+    font-size: 14px;
+    margin: 1.5% 0 0 0!important;
 }
 
-nav {
-    background- color: #353D9E;
-    height: 6vh;
+.blocBanner {
+    margin: 0;
 }
 
-nav img {
-    width: 100%;
-}
-
-.navbar_logo {
-    height: 100%;
-    max-height: 65px;
+#imgHome {
+    margin: 5% 0 0 0;
+    height: auto;
     width: auto;
 }
 
-.navbar_paragraphe {
-    color: white;
-    margin-right: 8%;
-    margin-left: 8%;
-    margin-bottom: 5%;
+.textHome {
+    padding: 4% 0 0% 15%!important;
 }
 
-.main_next_logo {
-    font-size: 5em;
+#accroche {
+    color: #353D9E;
+    font-size: 42px;
+    font-style: italic;
+    font-weight: 300;
+    text-align: justify;
 }
 
-.blue-text {
-    color: #2a477c !important;
-}*/
-
-
-/*USER*/
-
-
-/*.center {
-  margin-top: 5% !important;
-}*/
-
-
-/*.utilisateur {
-    margin-top: 8%;
+#auteurAccroche {
+    color: red;
+    font-size: 28px;
+    font-weight: 300;
+    text-align: left;
 }
 
-label {
-    color: white;
-    opacity: 0.75;
+.blocTri {
+    color: grey;
+    margin: 1% 0 1% 0;
 }
 
-.blueForm {
-    background-color: #2a477c!important;
-    border: 1px solid #2a477c;
+.itemTri {
+    border: 1px grey solid;
+    margin: 0;
+    padding: 0;
 }
 
-.checkbox-indigo[type="checkbox"]+label:before {
-    border: 2px solid white;
-    background: transparent;
+.titreFormation {
+    color: #353D9E;
+    font-size: 18px;
+    font-weight: 500;
 }
 
-.checkbox-indigo[type="checkbox"]:checked+label:before {
-    border: 2px solid transparent;
-    border-bottom: 2px solid white;
-    border-right: 2px solid white;
-    background: transparent;
+.descriptionFormation {
+    color: #353D9E;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: justify;
 }
 
-.checkbox-indigo.filled-in[type="checkbox"]+label:after {
-    border: 2px solid white;
-    background: transparent;
+.texteFormation {
+    margin: 3% 3% 3% 3%!important;
+    padding: 3% 3% 3% 3%!important;
 }
 
-.checkbox-indigo.filled-in[type="checkbox"]:checked+label:after {
-    background: white;
+.texteFormation1 {
+    margin: 3% 3% 3% 3%!important;
+    padding: 3% 3% 3% 3%!important;
 }
 
-.checkbox-indigo.filled-in[type="checkbox"]:checked+label:before {
-    border-top: 2px solid transparent;
-    border-left: 2px solid transparent;
-    border-right: 2px solid #fff;
-    border-bottom: 2px solid #fff;
-}*/
-
-
-/*LISTE*/
-
-
-/*.collection-item.avatar {
-    font-size: 1em
+.starFormation {
+    color: red;
 }
 
-.textuel {
-    margin-top: 2%;
-    color: #2a477c;
+.avisFormation {
+    color: red;
+    font-size: 14px;
+    font-weight: 300;
 }
 
-.material-icons.prefix.textuel {
-    font-size: 3em;
-    margin-top: 7%;
-}*/
+.placeFormation {
+    color: red;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.creditsFormation {
+    color: #353D9E;
+    font-size: 14px;
+    font-weight: 400;
+    text-decoration: underline;
+}
+
+.typeFormation {
+    color: #353D9E;
+    font-size: 14px;
+    font-weight: 400;
+    text-decoration: underline;
+}
+
+
+/*Footer*/
+
+footer {
+    background-color: #353D9E!important;
+    padding-bottom: 1.4%;
+}
+
+
+
+/* cour*/
+
+.forMarge {
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+
+.quizzMarge {
+    margin-bottom: 3%;
+}
+
+/* Profil*/
+.profilMarge {
+    margin-top: 1%;
+}
+
+/* admin*/
+
+.btnAdmin{
+  width: 100px!important;
+  height: 100px!important;
+}
+
+.btn-floating.btn-large.btnAdmin i {
+    line-height: 96px!important;
+}
+.btn-large.btnAdmin i {
+    font-size: 3.6rem!important;
+}

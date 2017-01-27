@@ -7,11 +7,19 @@ const routes = ($routeProvider, $httpProvider, $locationProvider) => {
                 connected: checkIsConnected
             }
         })
-        .when('/mention', {
-            templateUrl: 'views/mention.html'
+        .when('/cour', {
+            templateUrl: 'views/cour.html'
         })
-        .when('/credit', {
-            templateUrl: 'views/credit.html'
+        .when('/quizz', {
+            templateUrl: 'views/quizz.html'
+        })
+        .when('/profil', {
+            templateUrl: 'views/profil.html',
+            controller: 'profilController',
+            controllerAs: 'vm',
+        })
+        .when('/admin', {
+            templateUrl: 'views/admin.html'
         })
         .when('/utilisateur/:id', {
             templateUrl: 'views/editUser.html',
