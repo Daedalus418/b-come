@@ -1,6 +1,6 @@
 <div>
-	<h1 class="center white-text">Editer un utilisateur</h1>
-	<div class="row white-text utilisateur">
+	<h1 class="center">Editer un utilisateur</h1>
+	<div class="row utilisateur">
 		<form class="col s12">
 			<div class="input-field col s6">
 				<input type="text" class="validate" id="last_name" ng-model='vm.user.last_name'>
@@ -26,12 +26,12 @@
 				<input type="text" class="validate" id="credit" ng-model='vm.user.credit'>
 				<label for="credit">{{vm.user.credit || "Nombre de crédits"}}</label>
 			</div>
-			<div class="input-field col s12 ">
+			<div class="input-field col s12  ">
 				<input type="checkbox" class="checkbox-indigo" id="isadmin" ng-model='vm.user.isAdmin' />
 				<label for="isadmin">Administrateur</label>
 			</div>
-			<div class="center">
-				<a class="waves-effect waves-light btn white green-text" ng-click='vm.update(vm.user)'><i class="material-icons left">&#xE5CA;</i>Valider</a>
+			<div class="input-field col s12 center">
+				<a href="#/liste" class="waves-effect waves-light btn white green-text" ng-click='vm.update(vm.user)'><i class="material-icons left">&#xE5CA;</i>Valider</a>
 				{{vm.loginMessage.title}}
 			</div>
 		</form>
