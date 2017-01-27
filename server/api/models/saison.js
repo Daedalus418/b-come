@@ -2,9 +2,10 @@ import mongoose from 'mongoose';
 
 const saisonSchema = new mongoose.Schema({
     saison: {
+        idSaison: Number,
         nomsaison: String,
         description: String,
-        idformation: []
+        idformation: String
     }
 });
 

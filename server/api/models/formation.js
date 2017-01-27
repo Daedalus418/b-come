@@ -2,7 +2,7 @@ import mongoose from 'mongoose';
 
 const formationSchema = new mongoose.Schema({
     formation: {
-        saison: Number,
+        saison: String,
         nomformation: String,
         image: String,
         description: String,

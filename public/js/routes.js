@@ -3,6 +3,8 @@ const routes = ($routeProvider, $httpProvider, $locationProvider) => {
     $routeProvider
         .when('/', {
             templateUrl: 'views/main.html',
+            controller: 'loadSaisonController',
+            controllerAs: 'vm',
             resolve: {
                 connected: checkIsConnected
             }
@@ -23,7 +25,9 @@ const routes = ($routeProvider, $httpProvider, $locationProvider) => {
         })
 
         .when('/admin', {
-            templateUrl: 'views/admin.html'
+            templateUrl: 'views/admin.html',
+            controller: 'formationController',
+            controllerAs: 'vm',
         })
 
         .when('/utilisateur/:id', {

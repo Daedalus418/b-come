@@ -2,11 +2,11 @@
     <div class="col s3 m3 l3 currentSeason">
         <span id="currentSeason1">Saison en cours :
         </span>
-
-        <span id="currentSeason2">Le dépassement de soi</span>
+        <span id="currentSeason2">{{vm.saisons[0].saison.nomsaison}}</span>
+        <!-- <span id="currentSeason2">Le dépassement de soi</span> -->
     </div>
     <div class="col s3 m3 l3 oldSeasonsLink">
-        Voir les anciennes saisons
+        Voir les anciennes saisons {{vm.saisons[1].saison.nomsaison}}
     </div>
 </div>
 <div class="divider"></div>
@@ -31,16 +31,15 @@
     <input ng-model="vm.searchText" type="text" class="col s3 m3 l3 offset-l2 form-control" placeholder="Recherche">
 </div>
 <div class="row">
-    <div class="col s3 m3 l3 offset-s1 offset-m1 offset-l1">
+    <div class="col s4 m4 l4" ng-repeat=" formation in vm.formations">
         <div class="card grey">
             <div class="card-image black-text">
-              <a href="#/cour"><img class="responsive-img" src="assets/img/apple.jpg"></a>
+              <a href="#/cour"><img class="responsive-img" src="/assets/img/{{formation.formation.image}}"></a>
             </div>
             <div class="card-content texteFormation">
-                <span class="card-title titreFormation center">JE SUIS UN TITRE</span><br>
-                <p class="descriptionFormation">Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression.</p>
-                <i class="small material-icons">grade</i><br>
-                <a>7 places restantes</a>
+                <span class="card-title titreFormation center">{{formation.formation.nomformation}}</span><br>
+                <p class="descriptionFormation">{{formation.formation.description}}</p>
+<div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>                <p><a>7 places restantes</a></p>
             </div>
             <div class="card-action texteFormation1">
                 <a>Avis</a>
@@ -49,4 +48,13 @@
             </div>
         </div>
     </div>
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = "//connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v2.8";
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
 </div>
