@@ -22,15 +22,11 @@ html {
     background-color: #9C9C9C;
 }
 
-.blueFont {
-    color: #353E9D;
-}
 
-
-/* navbar*/
+/* NavBar*/
 
 .iconNav {
-    padding-right: 7%;
+    padding-right: 35%;
 }
 
 .NavBar {
@@ -200,25 +196,7 @@ html {
 }
 
 
-/* login*/
-
-.connect {
-    margin-right: 35%;
-    margin-left: 35%;
-    margin-top: 10%;
-}
-
-.btnconnect {
-    width: 27%;
-}
-
-.form-control {
-    padding-left: 10px!important;
-}
-
-.marge {
-    margin-bottom: -6%;
-}
+/*Footer*/
 
 footer {
     background-color: #353D9E!important;
