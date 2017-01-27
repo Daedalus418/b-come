@@ -21,9 +21,6 @@ const routes = ($routeProvider, $httpProvider, $locationProvider) => {
         .when('/admin', {
             templateUrl: 'views/admin.html'
         })
-        .when('/home', {
-            templateUrl: 'views/home.html'
-        })
         .when('/utilisateur/:id', {
             templateUrl: 'views/editUser.html',
             controller: 'editUserController',
