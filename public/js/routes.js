@@ -13,7 +13,7 @@ const routes = ($routeProvider, $httpProvider, $locationProvider) => {
         .when('/quizz', {
             templateUrl: 'views/quizz.html'
         })
-        .when('/profil', {
+        .when('/profil/:id', {
             templateUrl: 'views/profil.html',
             controller: 'profilController',
             controllerAs: 'vm',
