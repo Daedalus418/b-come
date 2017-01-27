@@ -29,6 +29,9 @@ const routes = ($routeProvider, $httpProvider, $locationProvider) => {
             controller: 'formationController',
             controllerAs: 'vm',
         })
+        .when('/adminCours', {
+            templateUrl: 'views/adminCours.html'
+        })
 
         .when('/utilisateur/:id', {
             templateUrl: 'views/editUser.html',

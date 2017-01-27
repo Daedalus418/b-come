@@ -1,12 +1,7 @@
 <nav role="navigation" ng-controller='navbarController as vm' class="NavBar">
     <div class="nav-wrapper">
-      <a href="#/"><img class="navbar_logo" src="assets/img/logo.svg"></a>
+        <a href="#/"><img class="navbar_logo" src="assets/img/logo.svg"></a>
         <ul class="right">
-            <li>
-              <a class="navbarName" ng-model='vm.user.first_name' ng-show="vm.isLogged">
-                  <span>Bienvenue, {{vm.user.first_name}}</span>
-              </a>
-            </li>
             <li>
                 <a href="#/main" class="navbar_link" ng-show="vm.isLogged">
                     <i class="material-icons left">home</i>Accueil</a>
@@ -24,5 +19,5 @@
                     <i class="material-icons left">exit_to_app</i>Déconnecter</a>
             </li>
         </ul>
-      </div>
-    </nav>
+    </div>
+</nav>

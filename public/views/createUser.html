@@ -1,4 +1,5 @@
-<h1 class="center white-text">Ajouter un utilisateur</h1>
+<div class="container">
+<h1 class="center">Ajouter un utilisateur</h1>
 <div class="row white-text utilisateur">
     <div class="row">
         <div class="input-field col s6">
@@ -20,18 +21,16 @@
             <label for="password">{{vm.loginMessage.message.errors.password.message || "Mot de passe"}}</label>
         </div>
     </div>
-    <div class="row">
-        <div class="row blue-text">
-            <select ng-model="vm.poste" class="browser-default col s6">
-      			   <option value="" disabled selected>Poste occupé</option>
+    <div class="input-field col s6">
+      <input type="text" class="validate" id="credit" ng-model="vm.credit" ng-required='true'>
+      <label for="credit">{{vm.loginMessage.errors.credit || "Nombre de crédits"}}</label>
+    </div>
+        <div class="row grey-text">
+            <select ng-model="vm.poste" class="browser-default col s6 postAdmin">
+      			   <option value="" disabled selected>-Poste occupé-</option>
                <option ng-repeat="poste in vm.postes">{{poste}}</option>
     		    </select>
         </div>
-        <div class="input-field col s6">
-            <input type="text" class="validate" id="credit" ng-model="vm.credit" ng-required='true'>
-            <label for="credit">{{vm.loginMessage.errors.credit || "Nombre de crédits"}}</label>
-        </div>
-    </div>
     <div class="row">
         <div class="input-field col s12 ">
             <input type="checkbox" class="checkbox-indigo" id="isadmin" ng-model='vm.isadmin' />
@@ -40,9 +39,10 @@
     </div>
     <div class="row">
         <div class="center">
-            <a class="waves-effect waves-light btn white red-text"><i class="material-icons left">&#xE5CD;</i>Supprimer</a>
+            <a href="#/liste" class="waves-effect waves-light btn white red-text"><i class="material-icons left">&#xE5CD;</i>Supprimer</a>
             <a class="waves-effect waves-light btn white green-text" ng-click='vm.createAccount()'><i class="material-icons left">&#xE5CA;</i>Valider</a>
             <br/> {{vm.loginMessage.title}}
         </div>
     </div>
+</div>
 </div>
