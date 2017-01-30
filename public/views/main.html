@@ -1,31 +1,197 @@
-<div class="main-text">
-    <div class="center-align">
-        <p class="navbar_paragraphe">
-          Bienvenue sur l’espace de téléchargement du module de correction du Vrai du Faux.<br>
-          Choisissez la version de l’outil compatible avec votre ordinateur.<br>
-          Une fois téléchargé, cliquez sur le fichier exécutable (.exe) pour lancer le module de correction interactif fonctionnant avec ou sans accès internet.
-        </p>
-        <div class="center-align main_center">
-              <div class="row">
-                <div class="col s4"><img class="main_lvdf_logo" src="assets/img/windows.png"></div>
-                <div class="col s4"><img class="main_lvdf_logo" src="assets/img/apple.png"></div>
-                <div class="col s4"><img class="main_lvdf_logo" src="assets/img/linux.png"></div>
-              </div>
-              <div class="row">
-                <div class="col s4"><a class="waves-effect waves-light white-text">Le Vrai du Faux pour Windows</a></div>
-                <div class="col s4"><a class="waves-effect waves-light white-text">Le Vrai du Faux pour Apple</a></div>
-                <div class="col s4"><a class="waves-effect waves-light white-text">Le Vrai du Faux pour Linux</a></div>
-              </div>
-              <div class="row">
-                <div class="col s4"><a href="/dist/levraidufaux Setup 0.1.0.exe" class="waves-effect waves-light btn white blue-text"><i class="material-icons left">file_download</i>Télécharger 64-bit</a></div>
-                <div class="col s4"><a href="/dist/levraidufaux-0.1.0.dmg" target="_self" class="waves-effect waves-light btn white blue-text"><i class="material-icons left">file_download</i>Télécharger</a></div>
-                <div class="col s4"><a href="/dist/levraidufaux-0.1.0-x86_64.AppImage" class="waves-effect waves-light btn white blue-text"><i class="material-icons left">file_download</i>Télécharger AppImage 64-bit</a></div>
-              </div>
-              <div class="row">
-                <div class="col s4"><a href="/dist/win-ia32-unpacked.zip" class="waves-effect waves-light white-text"><i class="material-icons left">file_download</i>Télécharger 32-bit</a></div>
-                <div class="col s4"><a href="/dist/levraidufaux-0.1.0-mac.zip" class="waves-effect waves-light white-text"><i class="material-icons left">file_download</i>Zip</a></div>
-                <div class="col s4"><a href="/dist/linux-ia32-unpacked.zip" class="waves-effect waves-light white-text"><i class="material-icons left">file_download</i>Télécharger AppImage 32-bit</a></div>
-              </div>
+<div class="container">
+    <div class="row">
+        <div class="col s3 m3 l4 currentSeason">
+            <span id="currentSeason1">Saison en cours :
+            </span>
+            <span id="currentSeason2">{{vm.saisons[0].saison.nomsaison}}</span>
+            <!-- <span id="currentSeason2">Le dépassement de soi</span> -->
+        </div>
+        <div class="col s3 m3 l4 oldSeasonsLink">
+            Voir les anciennes saisons
+        </div>
+    </div>
+    <div class="divider"></div>
+    <div class="row col s12 m12 l12 blocBanner">
+        <div class="row col s4 m4 l4">
+            <img class="responsive-img origami" src="assets/img/oiseau.svg">
+        </div>
+        <div class="row col s8 m8 l8 textHome">
+            <h1 id="accroche">"The secret of getting ahead is getting started."</h1>
+            <p id="auteurAccroche">Mark Twain</p>
+        </div>
+    </div>
+
+    <div class="divider"></div>
+    <div class="row col s12 m12 l12 blocTri">
+        <div class="col s1 m1 l1 offset-s1 offset-m1 offset-l1">Filtres :</div>
+        <div class="col s1 m1 l1 itemTri center">date</div>
+        <div class="col s1 m1 l1 itemTri center">type</div>
+        <div class="col s1 m1 l1 itemTri center">crédits</div>
+        <div class="col s1 m1 l1 itemTri center">avis</div>
+        <input ng-model="vm.searchText" type="text" class="col s3 m3 l3 offset-l2 form-control" placeholder="Recherche">
+    </div>
+    <div class="row">
+        <div class="col s4 m4 l4" ng-repeat="formation in vm.formations | filter:vm.searchText" ng-init="editViewActive = fasle">
+            <div class="card grey">
+                <div class="card-image black-text">
+                    <a href="#/cour"><img class="responsive-img" src="/assets/img/{{formation.formation.image}}"></a>
+                </div>
+                <div class="card-content texteFormation">
+                    <span class="card-title titreFormation center">{{formation.formation.nomformation}}</span><br>
+                    <p class="descriptionFormation">{{formation.formation.description}}</p>
+                    <div class="row"><br>
+                        <!-- <div class="col s6"><div class="rating{{$index}}"></div></div> -->
+                        <div class="col s7">
+                            <i class="material-icons">star</i>
+                            <i class="material-icons">star</i>
+                            <i class="material-icons">star</i>
+                            <i class="material-icons">star_border</i>
+                            <i class="material-icons">star_border</i>
+                        </div>
+                        <div class="col s5">7 places restantes</div>
+                    </div>
+                </div>
+                <a>{{formation.formation.credit}}
+                    crédits
+                </a>
+                <a>/
+                    {{formation.formation.format}}</a>
+                <div class="card-action texteFormation1">
+                    <!-- <a ng-click="editViewActive = !editViewActive">Avis</a> -->
+                    <a data-target="modal{{$index}}" class="">En savoir plus</a>
+                    <a href="#/profil/{{vm.userId}}">Inscription</a>
+                </div>
+                <ul class="collection with-header" ng-show="">
+                    <li class="collection-header">
+                        <h4>First Names</h4>
+                    </li>
+                    <li class="collection-item">
+                        <a>Posté par
+                            {{formation.formation.commentaire.commentaireUn.user}}</a>
+                        <a>
+                            qui a donné
+                            {{formation.formation.commentaire.commentaireUn.like}}
+                            à cette formation</a>
+                        <p>{{formation.formation.commentaire.commentaireUn.commentaire}}</p>
+                    </li>
+                    <li class="collection-item">
+                        <a>Posté par
+                            {{formation.formation.commentaire.commentaireDeux.user}}</a>
+                        <a>
+                            qui a donné
+                            {{formation.formation.commentaire.commentaireDeux.like}}
+                            à cette formation</a>
+                        <p>{{formation.formation.commentaire.commentaireDeux.commentaire}}</p>
+                    </li>
+                    <li class="collection-item">
+                        <a>Posté par
+                            {{formation.formation.commentaire.commentaireTrois.user}}</a>
+                        <a>
+                            qui a donné
+                            {{formation.formation.commentaire.commentaireTrois.like}}
+                            à cette formation</a>
+                        <p>{{formation.formation.commentaire.commentaireTrois.commentaire}}</p>
+                    </li>
+                    <li class="collection-item">
+                        <a>Posté par
+                            {{formation.formation.commentaire.commentaireQuatre.user}}</a>
+                        <a>
+                            qui a donné
+                            {{formation.formation.commentaire.commentaireQuatre.like}}
+                            à cette formation</a>
+                        <p>{{formation.formation.commentaire.commentaireQuatre.commentaire}}</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal0" class="modal blue-text">
+        <div class="modal-content">
+            <h4 class="center">Les bases de la gestion de temps.</h4>
+            <div class="center row col s12">
+                <img class="responsive-img col s6" src="/assets/img/{{vm.formations[0].formation.image}}">
+                <ul class="collection with-header">
+                    <li class="collection-header">
+                        <h4>Avis: 
+                            {{vm.formations[0].formation.nomformation}}</h4>
+                    </li>
+                    <li class="collection-item">
+                        <a>Posté par
+                            {{vm.formations[0].formation.commentaire.commentaireUn.user}}</a>
+                        <a>
+                            qui a donné
+                            {{vm.formations[0].formation.commentaire.commentaireUn.like}}
+                            à cette formation</a>
+                        <p class="grey-text">{{vm.formations[0].formation.commentaire.commentaireUn.commentaire}}</p>
+                    </li>
+                    <li class="collection-item">
+                        <a>Posté par
+                            {{vm.formations[0].formation.commentaire.commentaireDeux.user}}</a>
+                        <a>
+                            qui a donné
+                            {{vm.formations[0].formation.commentaire.commentaireDeux.like}}
+                            à cette formation</a>
+                        <p class="grey-text">{{vm.formations[0].formation.commentaire.commentaireDeux.commentaire}}</p>
+                    </li>
+                    <li class="collection-item">
+                        <a>Posté par
+                            {{vm.formations[0].formation.commentaire.commentaireTrois.user}}</a>
+                        <a>
+                            qui a donné
+                            {{vm.formations[0].formation.commentaire.commentaireTrois.like}}
+                            à cette formation</a>
+                        <p class="grey-text">{{vm.formations[0].formation.commentaire.commentaireTrois.commentaire}}</p>
+                    </li>
+                </ul>
+                <p class="center col s6">Avez-vous remarqué que les problèmes viennent souvent plus des attitudes que des aptitudes ? Encore faut-il avoir la juste attitude, le comportement adapté à l’emploi, la fonction …</p>
+                <a class="modal-close waves-effect waves-light btn white red-text">
+                    <i class="material-icons left">&#xE5CD;</i>Sortie</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="modal1" class="modal blue-text">
+    <div class="modal-content">
+        <h4 class="center">Les bases de la gestion de temps.</h4>
+        <div class="center row col s12">
+            <img class="responsive-img col s6" src="/assets/img/{{vm.formations[1].formation.image}}">
+            <ul class="collection with-header">
+                <li class="collection-header">
+                    <h4>Avis:
+                        {{vm.formations[1].formation.nomformation}}</h4>
+                </li>
+                <li class="collection-item">
+                    <a>Posté par
+                        {{vm.formations[1].formation.commentaire.commentaireUn.user}}</a>
+                    <a>
+                        qui a donné
+                        {{vm.formations[1].formation.commentaire.commentaireUn.like}}
+                        à cette formation</a>
+                    <p class="grey-text">{{vm.formations[1].formation.commentaire.commentaireUn.commentaire}}</p>
+                </li>
+                <li class="collection-item">
+                    <a>Posté par
+                        {{vm.formations[1].formation.commentaire.commentaireDeux.user}}</a>
+                    <a>
+                        qui a donné
+                        {{vm.formations[1].formation.commentaire.commentaireDeux.like}}
+                        à cette formation</a>
+                    <p class="grey-text">{{vm.formations[1].formation.commentaire.commentaireDeux.commentaire}}</p>
+                </li>
+                <li class="collection-item">
+                    <a>Posté par
+                        {{vm.formations[1].formation.commentaire.commentaireTrois.user}}</a>
+                    <a>
+                        qui a donné
+                        {{vm.formations[1].formation.commentaire.commentaireTrois.like}}
+                        à cette formation</a>
+                    <p class="grey-text">{{vm.formations[1].formation.commentaire.commentaireTrois.commentaire}}</p>
+                </li>
+            </ul>
+            <p class="center col s6">Avez-vous remarqué que les problèmes viennent souvent plus des attitudes que des aptitudes ? Encore faut-il avoir la juste attitude, le comportement adapté à l’emploi, la fonction …</p>
+            <a class="modal-close waves-effect waves-light btn white red-text">
+                <i class="material-icons left">&#xE5CD;</i>Sortie</a>
         </div>
     </div>
 </div>

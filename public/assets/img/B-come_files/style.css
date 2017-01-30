@@ -1,0 +1,363 @@
+/*Global*/
+
+html {
+    background-color: #efefef;
+    color: #353E9D;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+/*main {
+    flex: 1 0 auto;
+}*/
+
+* {
+    font-family: 'Fira Sans', sans-serif;
+}
+
+.divider {
+    background-color: #9C9C9C;
+}
+
+
+/* NavBar*/
+
+.navbarName nav ul a:hover {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.iconNav {
+    padding-right: 35%;
+}
+
+.NavBar {
+    background-color: #353D9E;
+}
+
+.navbar_logo {
+    height: 100%;
+    max-height: 55px;
+    padding-left: 5%;
+    width: auto;
+}
+
+.buttonAdmin {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+/*Login*/
+
+.connect {
+    margin-right: 35%;
+    margin-left: 35%;
+    margin-top: 10%;
+}
+
+.btnconnect {
+    width: 27%;
+}
+
+.form-control {
+    padding-left: 10px!important;
+}
+
+.marge {
+    margin-bottom: -6%;
+}
+
+.blueFont {
+    color: #353E9D;
+}
+
+
+/*Home*/
+
+.currentSeason {
+    font-size: 20px;
+    margin: 1% 0 0 4%!important;
+    padding: 0;
+}
+
+#currentSeason1 {
+    color: #353D9E;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+#currentSeason2 {
+    color: #F03ED5;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.oldSeasonsLink {
+    color: grey;
+    font-weight: 400;
+    font-size: 14px;
+    margin: 1.5% 0 0 0!important;
+}
+
+.blocBanner {
+    margin: 0;
+}
+
+#imgHome {
+    margin: 5% 0 0 0;
+    height: auto;
+    width: auto;
+}
+
+.textHome {
+    padding: 4% 0 0% 15%!important;
+}
+
+#accroche {
+    color: #353D9E;
+    font-size: 42px;
+    font-style: italic;
+    font-weight: 300;
+    text-align: justify;
+}
+
+#auteurAccroche {
+    color: red;
+    font-size: 28px;
+    font-weight: 300;
+    text-align: left;
+}
+
+.blocTri {
+    color: grey;
+    margin: 1% 0 0 0!important;
+}
+
+.itemTri {
+    border: 1px grey solid;
+    margin: 0;
+    padding: 0;
+}
+
+.form-control {
+    border: 1px #9E9E9E solid!important;
+    height: 1.7rem!important;
+}
+
+.titreFormation {
+    color: #353D9E;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.descriptionFormation {
+    color: #353D9E;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: justify;
+}
+
+.card, .card-content, .card-action {
+    background-color: #e0e0e0!important;
+}
+
+.texteFormation {
+    margin: 1% 1% 1% 1%!important;
+    padding: 2% 2% 2% 2%!important;
+}
+
+.texteFormation1 {
+    margin: 1% 1% 1% 1%!important;
+    padding: 2% 2% 2% 2%!important;
+}
+
+.starFormation {
+    color: red;
+}
+
+.avisFormation {
+    color: red;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.placeFormation {
+    color: red;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.creditsFormation {
+    color: #353D9E;
+    font-size: 14px;
+    font-weight: 400;
+    text-decoration: underline;
+}
+
+.typeFormation {
+    color: #353D9E;
+    font-size: 14px;
+    font-weight: 400;
+    text-decoration: underline;
+}
+
+
+/*Formation + Quizz*/
+
+.forMarge {
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+
+.quizzMarge {
+    font-size: 16px;
+    font-weight: 300;
+    margin-bottom: 3%;
+}
+
+.texteCours {
+    text-align: justify;
+}
+
+.video-container {
+    margin-top: 1%;
+    margin-bottom: 2%;
+}
+
+#titreQuizz {
+    font-size: 35px;
+    font-weight: 600;
+}
+
+#titreFormation {
+    font-size: 35px;
+    font-weight: 600;
+}
+
+#quizzWord {
+    font-size: 18px;
+    font-weight: 500;
+    margin-right: 2%;
+}
+
+.buttonCours {
+    background-color: #353E9D;
+    -webkit-transition: all 0.5s;
+}
+
+.buttonCours:hover {
+    background-color: #F36C91;
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+}
+
+.buttonQuizz {
+    background-color: #353E9D;
+}
+
+.questionQuizz {
+    font-size: 24px;
+    font-weight: 400;
+}
+
+
+/* Profil*/
+
+.profilMarge {
+    margin-top: 1%;
+}
+
+.circle {
+  margin-top: 5%;
+  border: white solid 17px;
+}
+
+.profileBg {
+  background: rgba(123,127,127,1);
+background: -moz-linear-gradient(bottom, rgba(123,127,127,1) 0%, rgba(187,191,190,1) 18%, rgba(224,229,229,1) 49%, rgba(249,255,254,1) 100%);
+background: -webkit-gradient(bottom, top, color-stop(0%, rgba(123,127,127,1)), color-stop(18%, rgba(187,191,190,1)), color-stop(49%, rgba(224,229,229,1)), color-stop(100%, rgba(249,255,254,1)));
+background: -webkit-linear-gradient(bottom, rgba(123,127,127,1) 0%, rgba(187,191,190,1) 18%, rgba(224,229,229,1) 49%, rgba(249,255,254,1) 100%);
+background: -o-linear-gradient(bottom, rgba(123,127,127,1) 0%, rgba(187,191,190,1) 18%, rgba(224,229,229,1) 49%, rgba(249,255,254,1) 100%);
+background: -ms-linear-gradient(bottom, rgba(123,127,127,1) 0%, rgba(187,191,190,1) 18%, rgba(224,229,229,1) 49%, rgba(249,255,254,1) 100%);
+background: linear-gradient(to top, rgba(123,127,127,1) 0%, rgba(187,191,190,1) 18%, rgba(224,229,229,1) 49%, rgba(249,255,254,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f68e0e', endColorstr='#c4cac0', GradientType=1 );
+}
+
+.profileSize {
+  font-weight: 800;
+  font-size: 2rem;
+}
+
+.profileColor {
+  color: white;
+  font-size: 1.5rem;
+}
+
+.profileBorder {
+  border: white solid 1px;
+  border-radius: 5px;
+}
+
+/* Admin*/
+
+.btnAdmin {
+    width: 100px!important;
+    height: 100px!important;
+}
+
+.btn-floating.btn-large.btnAdmin i {
+    line-height: 96px!important;
+}
+
+.btn-large.btnAdmin i {
+    font-size: 3.6rem!important;
+}
+
+.postAdmin {
+    margin-top: 17px;
+}
+
+.imgAdmin {
+    margin-top: 1%;
+}
+
+.titreAdmin {
+    font-size: 25px;
+    font-weight: 300;
+    padding: 5% 0 0 0;
+}
+
+#titreAdminFormation {
+    font-size: 30px;
+    font-weight: 400;
+}
+
+#backAdminCours {
+    font-size: 16px;
+    font-weight: 300;
+    margin-top: 5%;
+}
+
+#backAdminHome {
+    font-size: 16px;
+    font-weight: 300;
+    margin: 0;
+    padding-top: 4.5%;
+}
+
+
+/*Footer*/
+
+footer {
+    background-color: #353D9E!important;
+    padding-bottom: 1.4%;
+}
+
+.modal{
+width: 90%!important;
+height: 100%!important;
+}

@@ -6,11 +6,12 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link rel="shortcut icon" href="assets/img/bulle_bleu_png.png">
+        <link rel="shortcut icon" href="assets/img/icon.png">
 
-        <title>Le Vrai du Faux</title>
+        <title>B-come</title>
         <link rel="stylesheet" href="vendor/materialize/bin/materialize.css" title="materialize"/>
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css?family=Fira+Sans:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
         <link rel="stylesheet" href="assets/css/style.css">
 
     </head>
@@ -18,14 +19,13 @@
 
         <ng-include src="'views/navbar.html'"></ng-include>
 
-        <div class="row">
-          <div class="col s10 offset-s1">
-            <ng-view></ng-view>
-          </div>
-        </div>
-        <ng-include src="'views/footer.html'"></ng-include>
+          <ng-view></ng-view>
+
 
         <script src="vendor/jquery/dist/jquery.min.js"></script>
+        <script src="vendor/jquery.star.rating.min.js"></script>
+        <!-- Compiled and minified JavaScript -->
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script> -->
         <script src="vendor/materialize/dist/js/materialize.js"></script>
 
         <script src="vendor/angular/angular.min.js"></script>
@@ -34,12 +34,19 @@
         <script src="js/factories/sessionFactory.js"></script>
 
         <script src="js/services/userService.js"></script>
+        <script src="js/services/formationService.js"></script>
+        <script src="js/services/saisonService.js"></script>
 
         <script src="js/controllers/navbarController.js"></script>
         <script src="js/controllers/loginController.js"></script>
         <script src="js/controllers/listController.js"></script>
         <script src="js/controllers/editUserController.js"></script>
+        <script src="js/controllers/profilController.js"></script>
         <script src="js/controllers/createUserController.js"></script>
+        <script src="js/controllers/formationController.js"></script>
+        <script src="js/controllers/saisonController.js"></script>
+        <script src="js/controllers/loadSaisonController.js"></script>
+        <script src="js/controllers/adminCoursController.js"></script>
 
         <script src="js/routes.js"></script>
 

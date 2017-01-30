@@ -1,191 +1,380 @@
+/*Global*/
+
 html {
-    color: white
+    background-color: #F0F0F0;
+    color: #353E9D;
 }
 
 body {
-    background-color: rgb(45, 78, 130);
-    font-style: Roboto;
-
-}
-.BlueBackground {
-    background-color: rgb(45, 78, 130);
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
 }
 
-.whiteFont {
-    color: rgb(255, 255, 255);
+* {
+    font-family: 'Fira Sans', sans-serif;
 }
 
-.blueFont {
-    color: rgb(45, 78, 130);
-}
-
-.whiteBackground {
-    background-color: rgb(255, 255, 255);
-}
-
-input {
-    color: white!important;
-    border-bottom: 1px solid white!important;
-}
-
-.input-field label {
-    color: white!important;
+.divider {
+    background-color: #9C9C9C;
+    opacity: 0.5;
 }
 
 
-/* NAVBAR*/
+/* NavBar*/
 
-.right, .right li, .right li a, .right li a i {
-    height: 6vh;
-    line-height: 6vh;
+.navbarName nav ul a:hover {
+    background-color: rgba(0, 0, 0, 0);
 }
 
-.right a {
-    font-size: 1rem;
-}
-
-.navbar_link {
-    color: #2a477c;
-}
-
-nav ul a {
-    color: #2a477c;
-}
-
-nav {
-    height: 6vh;
-}
-
-nav img {
-    width: 100%;
+.NavBar {
+    background-color: #353D9E;
 }
 
 .navbar_logo {
-    height: 100%;
-    max-height: 65px;
-    width: auto;
-    height: 100%;
+    padding-top: 1.2%;
 }
 
-.navbar_paragraphe {
+.buttonAdmin {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+/*Login*/
+
+.connect {
+    margin-right: 35%;
+    margin-left: 35%;
+    margin-top: 10%;
+}
+
+.btnconnect {
+    width: 27%;
+}
+
+.form-control {
+    padding-left: 10px!important;
+}
+
+.marge {
+    margin-bottom: -6%;
+}
+
+.blueFont {
+    color: #353E9D;
+}
+
+
+/*Home*/
+
+.origami {
+   padding-top: 2%;
+}
+
+.currentSeason {
+    font-size: 20px;
+    margin: 1% 0 0 0!important;
+    padding: 0;
+}
+
+#currentSeason1 {
+    color: #353D9E;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+#currentSeason2 {
+    color: #F03ED5;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.oldSeasonsLink {
+    color: grey;
+    font-weight: 400;
+    font-size: 14px;
+    margin: 1.5% 0 0 0!important;
+}
+
+.blocBanner {
+    margin: 0;
+}
+
+#imgHome {
+    padding: 2% 2% 0 0;
+}
+
+.textHome {
+    padding: 4% 0 0 15%!important;
+}
+
+#accroche {
+    color: #353D9E;
+    font-size: 35px;
+    font-style: italic;
+    font-weight: 300;
+    margin: 0;
+    padding-top: 4%!important;
+    text-align: left;
+}
+
+#auteurAccroche {
+    color: red;
+    font-size: 28px;
+    font-weight: 300;
+    margin: 0;
+    padding-top: 4%!important;
+    text-align: left;
+}
+
+.blocTri {
+    color: grey;
+    margin: 1.5% 0 0 0!important;
+}
+
+.itemTri {
+    border: 1px grey solid;
+    border-radius: 4px;
+    margin: 0 1% 0 1%;
+    padding: 0;
+}
+
+.form-control {
+    border: 1px #9E9E9E solid!important;
+    height: 1.7rem!important;
+}
+
+.titreFormation {
+    color: #353D9E;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.descriptionFormation {
+    color: #353D9E;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: justify;
+}
+
+.card, .card-content, .card-action {
+    background-color: #e0e0e0!important;
+}
+
+.texteFormation {
+    margin: 1% 1% 1% 1%!important;
+    padding: 2% 2% 2% 2%!important;
+}
+
+.texteFormation1 {
+    margin: 1% 1% 1% 1%!important;
+    padding: 2% 2% 2% 2%!important;
+}
+
+.starFormation {
+    color: red;
+}
+
+.avisFormation {
+    color: red;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.placeFormation {
+    color: red;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.creditsFormation {
+    color: #353D9E;
+    font-size: 14px;
+    font-weight: 400;
+    text-decoration: underline;
+}
+
+.typeFormation {
+    color: #353D9E;
+    font-size: 14px;
+    font-weight: 400;
+    text-decoration: underline;
+}
+
+
+/*Formation + Quizz*/
+
+.forMarge {
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+
+.quizzMarge {
+    font-size: 16px;
+    font-weight: 300;
+    margin-bottom: 3%;
+}
+
+.texteCours {
+    text-align: justify;
+}
+
+.video-container {
+    margin-top: 1%;
+    margin-bottom: 2%;
+}
+
+#titreQuizz {
+    font-size: 35px;
+    font-weight: 600;
+}
+
+#titreFormation {
+    font-size: 35px;
+    font-weight: 600;
+}
+
+#quizzWord {
+    font-size: 18px;
+    font-weight: 500;
+    margin-right: 2%;
+}
+
+.buttonCours {
+    background-color: #353E9D;
+    -webkit-transition: all 0.5s;
+}
+
+.buttonCours:hover {
+    background-color: #F36C91;
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+}
+
+.buttonQuizz {
+    background-color: #353E9D;
+}
+
+.questionQuizz {
+    font-size: 24px;
+    font-weight: 400;
+}
+
+
+/* Profil*/
+
+.textHome1 {
+    padding: 0 0 0 10%!important;
+}
+
+#accroche1 {
+    color: #353D9E;
+    font-size: 30px;
+    font-style: italic;
+    font-weight: 300;
+    margin: 0!important;
+    padding: 0!important;
+    text-align: left;
+}
+
+#auteurAccroche1 {
+    color: red;
+    font-size: 25px;
+    font-weight: 300;
+    margin: 0!important;
+    padding: 0!important;
+    text-align: left;
+}
+
+.profilMarge {
+    margin-top: 1%;
+}
+
+.circle {
+    margin-top: 5%;
+    border: white solid 15px;
+}
+
+#imgGuy {
+    position : absolute;
+    height: 50px;
+    width: 50px;
+}
+
+.profileBg {
+    background: rgba(123, 127, 127, 1);
+    background: -moz-linear-gradient(bottom, rgba(123, 127, 127, 1) 0%, rgba(187, 191, 190, 1) 18%, rgba(224, 229, 229, 1) 49%, rgba(249, 255, 254, 1) 100%);
+    background: -webkit-gradient(bottom, top, color-stop(0%, rgba(123, 127, 127, 1)), color-stop(18%, rgba(187, 191, 190, 1)), color-stop(49%, rgba(224, 229, 229, 1)), color-stop(100%, rgba(249, 255, 254, 1)));
+    background: -webkit-linear-gradient(bottom, rgba(123, 127, 127, 1) 0%, rgba(187, 191, 190, 1) 18%, rgba(224, 229, 229, 1) 49%, rgba(249, 255, 254, 1) 100%);
+    background: -o-linear-gradient(bottom, rgba(123, 127, 127, 1) 0%, rgba(187, 191, 190, 1) 18%, rgba(224, 229, 229, 1) 49%, rgba(249, 255, 254, 1) 100%);
+    background: -ms-linear-gradient(bottom, rgba(123, 127, 127, 1) 0%, rgba(187, 191, 190, 1) 18%, rgba(224, 229, 229, 1) 49%, rgba(249, 255, 254, 1) 100%);
+    background: linear-gradient(to top, rgba(123, 127, 127, 1) 0%, rgba(187, 191, 190, 1) 18%, rgba(224, 229, 229, 1) 49%, rgba(249, 255, 254, 1) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#f68e0e', endColorstr='#c4cac0', GradientType=1);
+}
+
+.profileSize {
+    font-weight: 800;
+    font-size: 2rem;
+}
+
+.profileColor {
     color: white;
-    margin-right: 8%;
-    margin-left: 8%;
-    margin-bottom: 5%;
+    font-size: 1.5rem;
 }
 
-.main_next_logo {
-    font-size: 5em;
-}
-
-.blue-text {
-    color: #2a477c !important;
-}
-
-/*FOOTER*/
-
-.social_footer {
-    padding-top: 10px;
-    width: 4vh;
-}
-
-.main_footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 6vh;
-}
-
-/*USER*/
-
-/*.center {
-  margin-top: 5% !important;
-}*/
-
-.utilisateur {
-    margin-top: 8%;
-}
-
-label {
-    color: white;
-    opacity: 0.75;
-}
-
-.blueForm {
-    background-color: #2a477c!important;
-    border: 1px solid #2a477c;
-}
-
-.checkbox-indigo[type="checkbox"]+label:before {
-    border: 2px solid white;
-    background: transparent;
-}
-
-.checkbox-indigo[type="checkbox"]:checked+label:before {
-    border: 2px solid transparent;
-    border-bottom: 2px solid white;
-    border-right: 2px solid white;
-    background: transparent;
-}
-
-.checkbox-indigo.filled-in[type="checkbox"]+label:after {
-    border: 2px solid white;
-    background: transparent;
-}
-
-.checkbox-indigo.filled-in[type="checkbox"]:checked+label:after {
-    background: white;
-}
-
-.checkbox-indigo.filled-in[type="checkbox"]:checked+label:before {
-    border-top: 2px solid transparent;
-    border-left: 2px solid transparent;
-    border-right: 2px solid #fff;
-    border-bottom: 2px solid #fff;
+.profileBorder {
+    border: white solid 1px;
+    border-radius: 5px;
 }
 
 
-/*LISTE*/
+/* Admin*/
 
-.collection-item.avatar {
-    font-size: 1em
+.btnAdmin {
+    width: 100px!important;
+    height: 100px!important;
 }
 
-.textuel {
+.btn-floating.btn-large.btnAdmin i {
+    line-height: 96px!important;
+}
+
+.btn-large.btnAdmin i {
+    font-size: 3.6rem!important;
+}
+
+.postAdmin {
+    margin-top: 17px;
+}
+
+.imgAdmin {
     margin-top: 2%;
-    color: #2a477c;
 }
 
-.material-icons.prefix.textuel {
-    font-size: 3em;
-    margin-top: 7%;
+.titreAdmin {
+    font-size: 25px;
+    font-weight: 300;
+    padding: 5% 0 5% 0;
 }
 
-
-/*RESPONSIVE*/
-
-@media screen and (min-height: 993px) {
-    /* Main*/
-    .main-text {
-        margin-top: 15%;
-    }
-    .main_center {
-      margin-top: 10%;
-    }
-    .navbar_paragraphe {
-      font-size: 2rem;
-    }
+#titreAdminFormation {
+    font-size: 30px;
+    font-weight: 400;
 }
 
-@media screen and (max-height: 992px) {
-    /* Main*/
-    .main-text {
-        margin-top: 7%;
-    }
-    .main_center {
-      margin-top: 10%;
-    }
-    .navbar_paragraphe {
-      font-size: 1.3rem;
-    }
+#backAdminCours {
+    font-size: 16px;
+    font-weight: 300;
+    margin-top: 5%;
+}
+
+#backAdminHome {
+    font-size: 16px;
+    font-weight: 300;
+    margin: 0;
+    padding-top: 4.5%;
+}
+.charactere {
+  padding: 35px !important;
 }

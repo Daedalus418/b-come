@@ -1,0 +1,67 @@
+<div class="container center">
+    <div class="row">
+        <h1 id="titreAdminFormation">Formations</h1>
+        <div class="row">
+            <div class="col s6 m6 l6">
+                <a id='boutonSaison' class="btn-floating btn-large indigo darken-1 btnAdmin">
+                    <i class="material-icons">wb_sunny</i>
+                </a>
+                <p>
+                    Gestion des saisons
+                </p>
+            </div>
+            <div class="col 6 m6 l6">
+                <a id='boutonFormation' target="_blank" class="btn-floating btn-large indigo darken-1 btnAdmin">
+                    <i class="material-icons">school</i>
+                </a>
+                <p>
+                    Gestion des formations
+                </p>
+            </div>
+        </div>
+
+        <!-- Boutons pour ajouter et supprimer une saison -->
+        <div id="modifSaison" style="display: none">
+            <a class="waves-effect waves-light btn-large blueColor" href="/#/addsaison">
+                <i ng-click='vm.createSaison()' class="material-icons right">playlist_add</i>Ajouter une saison</a>
+            <a class="waves-effect waves-light btn-large red" href="/#/deleteSaison">
+                <i ng-click='vm.deleteSaison()' class="material-icons right red">delete</i>Supprimer une saison</a>
+        </div>
+
+        <!-- Boutons pour ajouter et supprimer une formation -->
+        <div id="modifFormation" style="display: none">
+            <a class="waves-effect waves-light btn-large blueColor" href="/#/addformation">
+                <i ng-click='vm.createFormation()' class="material-icons right">playlist_add</i>Ajouter une formation</a>
+            <a class="waves-effect waves-light btn-large red" href="/#/deleteformation">
+                <i ng-click='vm.deleteFormation()' class="material-icons right red">delete</i>Supprimer une formation</a>
+        </div>
+
+        <!-- <form class="col s12">
+            <div class="row">
+                <div class="input-field col s12 m12 l12">
+                    <input placeholder="Nom de la Formation" id="titre" type="text" class="validate">
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12 m12 l12">
+                    <input placeholder="Importer un contenu visuel" id="visuel" type="text" class="validate">
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12 m12 l12">
+                    <textarea placeholder="Texte" id="textarea1" class="materialize-textarea"></textarea>
+                </div>
+            </div>
+        </div>
+    </form>
+    <div href='' class="input-field center">
+        <button class="btn waves-effect waves-light buttonQuizz" type="submit" name="action">Enregistrer
+        </button>
+    </div> -->
+    <div id="backAdminCours">
+        <a href="/#/admin">
+            <i class="tiny material-icons">input</i>
+            Retour accueil administration
+        </a>
+    </div>
+</div>

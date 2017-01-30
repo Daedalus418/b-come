@@ -5,7 +5,7 @@ import token from '../../token.js';
 
 const hashCode = (s) => s.split("").reduce((a, b) => {
     a = ((a << 5) - a) + b.charCodeAt(0);
-    a & a
+    a & a;
 }, 0);
 
 const userSchema = new mongoose.Schema({
@@ -30,13 +30,12 @@ const userSchema = new mongoose.Schema({
         type: String,
         required: [true, 'Définissez un mot de passe']
     },
-    bij: {
-      type: String,
-      required: [true, 'Entrez un nom de structure (BIJ, UNIJ,...)']
+    poste: {
+        type: String
     },
-    number: {
-      type: Number,
-      required: [true, 'Entrez un numéro de département']
+    credit: {
+        type: Number,
+        required: [true, 'Entrez un nombre de crédits']
     },
     isAdmin: {
         type: Boolean,
@@ -56,13 +55,13 @@ let model = mongoose.model('User', userSchema);
 export default class User {
 
     connect(req, res) {
-        if (!req.body.email) {
-            res.status(400).send('Entrez une adresse mail s\'il vous plait');
+        if (!req.body.last_name) {
+            res.status(400).send('Entrez un nom s\'il vous plait');
         } else if (!req.body.password) {
             res.status(400).send('Entrez un mot de passe s\'il vous plait');
         } else {
             model.findOne({
-                email: req.body.email
+                last_name: req.body.last_name
             }, (err, user) => {
                 if (err || !user) {
                     res.sendStatus(403);

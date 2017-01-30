@@ -1,26 +1,17 @@
-<div class="row">
-    <div class='center white-text'>
-        <h1>Connectez-vous</h1>
-    </div>
+<div class="row connect center">
+  <a href="#/"><img class="navbar_logo" src="assets/img/logoairliquide.svg"></a>
     <form class="col s12">
-        <div class="input-field col s12">
-            <input type="email" class="form-control" id="email" ng-model='vm.email' ng-required='true'>
-            <label for="email" class="col-sm-2 control-label">Email</label>
+        <div class="input-field col s12 marge blueFont">
+            <input type="text" placeholder="Nom" class="form-control white" id="last_name" ng-model='vm.last_name' ng-required='true'>
         </div>
-        <div class="input-field col s12">
-            <input type="password" class="form-control" id="password" ng-model='vm.password' ng-required='true'>
-            <label for="password" class="col-sm-2 control-label">Mot de passe</label>
-        </div>
-        <div>
-            <p>Mot de passe oublié ? Contactez votre administrateur.</p>
-        </div>
-        <div class="input-field col s10">
-            <button ng-click='vm.login()' ng-disabled="formConnect.$invalid" class="btn btn-primary pull-right">Sign in</button>
+        <div class="input-field col s12 blueFont">
+            <input type="password" placeholder="Mot de passe" class="form-control white" id="password" ng-model='vm.password' ng-required='true'>
         </div>
     </form>
-    <div ng-show="(vm.loginMessage)" class="alert" ng-class="{'alert-danger': vm.loginMessage.type == 'error', 'alert-success': vm.loginMessage.type == 'success', 'alert-info': vm.loginMessage.type == 'info'}">
-        <h4>
-            <span class="glyphicon glyphicon-exclamation-sign pull-left"></span>&nbsp;{{vm.loginMessage.title}}</h4>
-        <p>{{vm.loginMessage.message}}</p>
-    </div>
 </div>
+<div class="input-field center">
+  <button ng-click='vm.login()' ng-disabled="formConnect.$invalid" class="btn btnconnect center">Connexion</button>
+</div>
+<div ng-show="(vm.loginMessage)" class="alert center" ng-class="{'alert-danger': vm.loginMessage.type == 'error', 'alert-success': vm.loginMessage.type == 'success', 'alert-info': vm.loginMessage.type == 'info'}">
+    <p>{{vm.loginMessage.message}}</p>
+  </div>

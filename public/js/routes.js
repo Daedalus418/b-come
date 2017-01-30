@@ -3,16 +3,53 @@ const routes = ($routeProvider, $httpProvider, $locationProvider) => {
     $routeProvider
         .when('/', {
             templateUrl: 'views/main.html',
+            controller: 'loadSaisonController',
+            controllerAs: 'vm',
             resolve: {
                 connected: checkIsConnected
             }
         })
-        .when('/mention', {
-            templateUrl: 'views/mention.html'
+
+        .when('/cours', {
+            templateUrl: 'views/cours.html',
+            resolve: {
+                connected: checkIsConnected
+            }
         })
-        .when('/credit', {
-            templateUrl: 'views/credit.html'
+
+        .when('/quizz', {
+            templateUrl: 'views/quizz.html',
+            resolve: {
+                connected: checkIsConnected
+            }
         })
+
+        .when('/profil/:id', {
+            templateUrl: 'views/profil.html',
+            controller: 'profilController',
+            controllerAs: 'vm',
+            resolve: {
+                connected: checkIsConnected
+            }
+        })
+
+        .when('/admin', {
+            templateUrl: 'views/admin.html',
+            controller: 'formationController',
+            controllerAs: 'vm',
+            resolve: {
+                connected: checkIsConnected
+            }
+        })
+        .when('/adminCours', {
+            templateUrl: 'views/adminCours.html',
+            controller: 'adminCoursController',
+            controllerAs: 'vm',
+            resolve: {
+                connected: checkIsConnected
+            }
+        })
+
         .when('/utilisateur/:id', {
             templateUrl: 'views/editUser.html',
             controller: 'editUserController',
@@ -21,6 +58,7 @@ const routes = ($routeProvider, $httpProvider, $locationProvider) => {
                 connected: checkIsConnected
             }
         })
+
         .when('/utilisateur', {
             templateUrl: 'views/createUser.html',
             controller: 'createUserController',
@@ -37,11 +75,29 @@ const routes = ($routeProvider, $httpProvider, $locationProvider) => {
                 connected: checkIsConnected
             }
         })
+
         .when('/login', {
             templateUrl: 'views/login.html',
             controller: 'loginController',
             controllerAs: 'vm'
         })
+        .when('/addformation', {
+            templateUrl: 'views/addformation.html',
+            controller: 'formationController',
+            controllerAs: 'vm',
+            resolve: {
+                connected: checkIsConnected
+            }
+        })
+        .when('/addsaison', {
+            templateUrl: 'views/addsaison.html',
+            controller: 'saisonController',
+            controllerAs: 'vm',
+            resolve: {
+                connected: checkIsConnected
+            }
+        })
+
         .otherwise({
             redirectTo: '/'
         });

@@ -1,0 +1,45 @@
+<div class="container">
+    <div class="row col s12 m12 l12 blocBanner">
+        <div class="row col s4 m4 l4">
+            <img class="responsive-img charactere" src="assets/img/guy.png" id="imgHome">
+        </div>
+        <div class="row col s8 m8 l8 textHome1">
+            <h1 id="accroche">{{vm.user.first_name}}
+                {{vm.user.last_name}}</h1>
+            <p id="auteurAccroche">3$ utilisés et 3$ restants</p>
+        </div>
+    </div>
+    <div class="row">
+        <ul class="collection">
+            <li class="grey darken-4 collection-item avatar">
+                <div class="col s12">
+                    <div class="col s4 profilMarge profileColor">Saison
+                    </div>
+                    <div class="col s4 profilMarge profileColor">Thème
+                    </div>
+                    <div class="input-field col s4 profileColor">
+                        <i class="material-icons prefix">&#xE8B6;</i>
+                        <input ng-model="vm.searchText" type="text" class="form-control" placeholder="Recherche">
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div ng-hide="vm.hideMe == 'ligne'" class="row">
+        <ul class="collection">
+            <li class="white darken-4 collection-item avatar">
+                <div class="col s12">
+                    <div class="col s4 profilMarge black-text">Saison: Le dépassement de soi
+                    </div>
+                    <div class="col s4 profilMarge black-text">Gérer son stress
+                    </div>
+                    <div class="col s4">
+                        <a ng-click="vm.deleteLigne()" class="btn-floating btn-large waves-effect waves-light red accent-4 right">
+                            <i class="material-icons">&#xE872;</i>
+                        </a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>

@@ -1,23 +1,25 @@
-<nav role="navigation" ng-controller='navbarController as vm'>
-    <div class="nav-wrapper white">
-        <a href="#/"><img class="navbar_logo" src="assets/img/logo.png"></a>
-        <ul class="right">
-            <li>
-                <a href="#/" class="navbar_link">
-                    <i class="material-icons left">&#xE88A;</i>Accueil</a>
-            </li>
-            <li>
-                <a href="#/utilisateur" class="navbar_link">
-                    <i class="material-icons left">&#xE7FE;</i>Ajouter un utilisateur</a>
-            </li>
-            <li>
-                <a href="#/liste" class="navbar_link">
-                    <i class="material-icons left">&#xE85D;</i>liste des utilisateurs</a>
-            </li>
-            <li ng-show='vm.isLogged'>
-                <a href='#' ng-click='vm.logout()' class="navbar_link">
-                    <i class="material-icons left">&#xE879;</i>Déconnecter</a>
-            </li>
-        </ul>
+<nav role="navigation" ng-controller='navbarController as vm' class="NavBar">
+    <div class="container">
+        <div class="nav-wrapper">
+            <a href="#/"><img class="navbar_logo" src="assets/img/logo.svg"></a>
+            <ul class="right">
+                <li>
+                    <a href="#/main" class="navbar_link" ng-show="vm.isLogged">
+                        <i class="material-icons left">home</i>Accueil</a>
+                </li>
+                <li>
+                    <a href="#/profil/{{vm.user._id}}" class="navbar_link" ng-show="vm.isLogged">
+                        <i class="material-icons left">account_circle</i>{{vm.user.first_name}}</a>
+                </li>
+                <li>
+                    <a href="#/liste" class="navbar_link" ng-model='vm.user.credit' ng-show="vm.isLogged">
+                        <i class="material-icons left">monetization_on</i>{{vm.user.credit}}</a>
+                </li>
+                <li ng-show='vm.isLogged'>
+                    <a href='#/login' ng-click='vm.logout()' class="navbar_link">
+                        <i class="material-icons left">exit_to_app</i>Déconnecter</a>
+                </li>
+            </ul>
+        </div>
     </div>
 </nav>
